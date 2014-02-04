@@ -1,10 +1,9 @@
-#!/usr/bin/env python
 import pandas as pd
 import numpy as np
 import pp
 
 data_path = "../data/"
-ncpus = 3
+ncpus = 15
 
 # have the job server use 4 cores without hyperthreading
 job_server = pp.Server(ncpus=ncpus)
@@ -40,26 +39,26 @@ jobs2 = [(input2,
           job_server.submit(kludgy_read_csv_wrapper2,
                             (input2,))) for input2 in mnth_by_mnth_files]
 
+job_server.wait()
+print "finished all jobs"
 delay1 = pd.DataFrame()
 for input, job1 in jobs1:
-    #delay1 = delay1.append(job1())
-    for i in range(job1().shape[0]):
-        a = job1()["ArrDelay"][i]
+    delay1 = delay1.append(job1())
 
-#delay2 = pd.DataFrame()
+delay2 = pd.DataFrame()
 for input2, job2 in jobs2:
-    for i in range(job2().shape[0]):
-        a = job2()["ARR_DELAY"][i]
-#    delay2 = delay2.append(job2())
+    delay2 = delay2.append(job2())
 
-#delay2 = np.array(delay2)
-#delay2 = pd.DataFrame(delay2, columns=["ArrDelay"])
-#total_delay = delay1.append(delay2)
-#
-#mean = total_delay.mean()
-#sd = total_delay.std()
-#median = total_delay.median()
-#
-#print "mean = {0}".format(mean[0])
-#print "sd = {0}".format(sd[0])
-#print "median = {0}".format(median[0])
+delay2 = np.array(delay2)
+delay2 = pd.DataFrame(delay2, columns=["ArrDelay"])
+total_delay = delay1.append(delay2)
+
+mean = total_delay.mean()
+sd = total_delay.std()
+median = total_delay.median()
+
+f = open("parallelized_result.txt", "w")
+f.write('mean = {0}\n'.format(mean[0]))
+f.write('median = {0}\n'.format(median[0]))
+f.write('std = {0}\n'.format(sd[0]))
+f.close()

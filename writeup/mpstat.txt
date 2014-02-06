@@ -1,0 +1,53 @@
+Filename: profile_stat.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     8    132.0 MiB      0.0 MiB   def run:
+     9    132.0 MiB      0.0 MiB       import pandas as pd
+    10    132.0 MiB      0.0 MiB       import numpy as np
+    11    132.0 MiB      0.0 MiB       data_path = "../data/"
+    12                             
+    13                                 # First read in the data from 1987 to 2007
+    14    132.0 MiB      0.0 MiB       year = [data_path + str(i) + ".csv" for i in range(1987, 2008)]
+    15                                 # create empty dataframe
+    16    132.0 MiB      0.0 MiB       delay1 = pd.DataFrame()
+    17                                 # loop through the year-by-year csvs
+    18   1993.0 MiB   1861.0 MiB       for yr_file in year:
+    19                                     # read in relevant column from csv file using pandas
+    20   1879.3 MiB   -113.7 MiB           temp = pd.read_csv(yr_file, usecols=["ArrDelay"])
+    21                                     # append the dataframes - this is done by reference not by value
+    22   1993.0 MiB    113.7 MiB           delay1 = delay1.append(temp)
+    23   1993.0 MiB      0.0 MiB           print 'appending ' + yr_file + ' - total lines = ' + \
+    24   1993.0 MiB      0.0 MiB               '{0}'.format(delay1.shape[0])
+    25                             
+    26                                 # create another empty dataframe for handling month by month csv
+    27   1993.0 MiB      0.0 MiB       delay2 = pd.DataFrame()
+    28   1993.0 MiB      0.0 MiB       month = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+    29   1993.0 MiB      0.0 MiB               'August', 'September', 'October', 'November', 'December']
+    30   1993.0 MiB      0.0 MiB       year = [data_path + str(i) + "_" +
+    31   1993.0 MiB      0.0 MiB               mth + ".csv" for i in range(2008, 2013) for mth in month]
+    32                                 # loop through all the month-by-month csv
+    33   2399.7 MiB    406.7 MiB       for yr_file in year:
+    34                                     # tell pandas to read only the relevant column in the csv
+    35   2392.2 MiB     -7.5 MiB           temp = pd.read_csv(yr_file, usecols=["ARR_DELAY"])
+    36                                     # append them to the dataframe by reference
+    37   2399.7 MiB      7.5 MiB           delay2 = delay2.append(temp)
+    38   2399.7 MiB      0.0 MiB           print 'appending ' + yr_file + ' - total lines = ' + \
+    39   2399.7 MiB      0.0 MiB               '{0}'.format(delay2.shape[0] + delay1.shape[0])
+    40                             
+    41                                 # hackish way to remove the column name of the dataframe to append
+    42                                 # the two types of csv columns together
+    43                                 # so I can compute the statistics in one pass later on
+    44   1510.7 MiB   -889.0 MiB       delay1 = np.array(delay1)
+    45   1265.8 MiB   -244.8 MiB       delay2 = np.array(delay2)
+    46   2399.7 MiB   1133.9 MiB       delay = np.append(delay1, delay2)
+    47   3533.6 MiB   1133.9 MiB       delay = pd.DataFrame(delay)
+    48   3533.6 MiB      0.0 MiB       print 'total number of valid lines = {0}'.format(delay.dropna().shape[0])
+    49                             
+    50                                 # note that pandas ignores nans automatically while computing stats
+    51   3533.6 MiB      0.0 MiB       print 'saving to results2.txt'
+    52   3533.6 MiB      0.0 MiB       f = open('results2.txt', 'w')
+    53   3533.6 MiB      0.0 MiB       f.write('mean = {0}\n'.format(delay[0].mean()))
+    54   3533.6 MiB      0.0 MiB       f.write('median = {0}\n'.format(delay[0].median()))
+    55   3533.6 MiB      0.0 MiB       f.write('std = {0}\n'.format(delay[0].std()))
+    56   3533.6 MiB     -0.0 MiB       f.close()

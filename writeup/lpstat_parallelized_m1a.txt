@@ -1,0 +1,122 @@
+         4673 function calls in 249.731 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      494  161.209    0.326  161.209    0.326 {method 'acquire' of 'thread.lock' objects}
+       81   44.126    0.545  155.997    1.926 threading.py:726(start)
+       81   22.865    0.282   22.865    0.282 {numpy.core.multiarray.concatenate}
+        1    5.846    5.846  249.630  249.630 profile_method1a.py:22(run)
+        1    5.201    5.201    5.201    5.201 {method 'sort' of 'numpy.ndarray' objects}
+       83    2.615    0.032  164.246    1.979 threading.py:308(wait)
+       81    2.533    0.031    2.785    0.034 threading.py:560(__init__)
+       81    1.480    0.018    1.480    0.018 {method 'ravel' of 'numpy.ndarray' objects}
+      162    0.691    0.004    0.691    0.004 threading.py:259(__init__)
+       81    0.546    0.007    0.546    0.007 threading.py:627(_newname)
+        1    0.421    0.421    0.650    0.650 _methods.py:60(_var)
+       81    0.365    0.005    4.418    0.055 profile_method1a.py:11(__init__)
+        1    0.349    0.349    0.349    0.349 {method 'flatten' of 'numpy.ndarray' objects}
+        4    0.344    0.086    0.344    0.086 {method 'reduce' of 'numpy.ufunc' objects}
+      247    0.294    0.001    0.294    0.001 threading.py:63(_note)
+       81    0.280    0.003    0.280    0.003 threading.py:709(_set_daemon)
+       81    0.272    0.003  111.869    1.381 threading.py:602(wait)
+       83    0.139    0.002    8.369    0.101 threading.py:296(_acquire_restore)
+        1    0.101    0.101  249.731  249.731 <string>:1(<module>)
+        1    0.044    0.044    0.694    0.694 _methods.py:100(_std)
+       81    0.002    0.000    0.002    0.000 {thread.start_new_thread}
+       81    0.001    0.000    4.052    0.050 threading.py:656(__init__)
+       81    0.001    0.000   24.347    0.301 function_base.py:3633(append)
+       81    0.001    0.000   52.662    0.650 threading.py:911(join)
+      163    0.001    0.000    0.001    0.000 threading.py:1152(currentThread)
+      167    0.000    0.000    0.000    0.000 {numpy.core.multiarray.array}
+      162    0.000    0.000    0.692    0.004 threading.py:241(Condition)
+       83    0.000    0.000    1.582    0.019 threading.py:299(_is_owned)
+       81    0.000    0.000    1.481    0.018 fromnumeric.py:1087(ravel)
+       85    0.000    0.000    0.001    0.000 numeric.py:322(asanyarray)
+      324    0.000    0.000    0.000    0.000 threading.py:58(__init__)
+      245    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+      245    0.000    0.000    0.000    0.000 {method 'release' of 'thread.lock' objects}
+       83    0.000    0.000    0.000    0.000 threading.py:293(_release_save)
+       81    0.000    0.000    2.785    0.034 threading.py:541(Event)
+      163    0.000    0.000    0.000    0.000 {thread.get_ident}
+      167    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+       81    0.000    0.000    0.000    0.000 numeric.py:252(asarray)
+      162    0.000    0.000    0.000    0.000 threading.py:569(isSet)
+        1    0.000    0.000    0.000    0.000 __init__.py:52(create_string_buffer)
+       81    0.000    0.000    0.000    0.000 threading.py:1008(daemon)
+        4    0.000    0.000    0.000    0.000 encoder.py:245(iterencode)
+        1    0.000    0.000    0.000    0.000 uuid.py:531(uuid4)
+        8    0.000    0.000    0.001    0.000 iostream.py:178(write)
+        2    0.000    0.000    0.114    0.057 _methods.py:42(_mean)
+        1    0.000    0.000    0.000    0.000 uuid.py:101(__init__)
+        3    0.000    0.000    0.000    0.000 _methods.py:32(_count_reduce_items)
+       38    0.000    0.000    0.000    0.000 {isinstance}
+        4    0.000    0.000    0.000    0.000 __init__.py:245(dumps)
+        1    0.000    0.000    5.550    5.550 function_base.py:2900(median)
+        1    0.000    0.000    0.000    0.000 session.py:554(send)
+        7    0.000    0.000    0.000    0.000 {method 'send' of 'zmq.backend.cython.socket.Socket' objects}
+        1    0.000    0.000    5.550    5.550 fromnumeric.py:491(sort)
+        1    0.000    0.000    0.000    0.000 session.py:463(msg)
+        8    0.000    0.000    0.000    0.000 {method 'write' of '_io.StringIO' objects}
+        4    0.000    0.000    0.000    0.000 jsonapi.py:46(dumps)
+        1    0.000    0.000    0.000    0.000 poll.py:86(poll)
+        5    0.000    0.000    0.000    0.000 {method 'update' of '_hashlib.HASH' objects}
+        4    0.000    0.000    0.000    0.000 session.py:82(<lambda>)
+        1    0.000    0.000    0.000    0.000 iostream.py:122(flush)
+        1    0.000    0.000    0.000    0.000 session.py:497(serialize)
+        8    0.000    0.000    0.000    0.000 {method 'decode' of 'str' objects}
+        2    0.000    0.000    0.114    0.057 fromnumeric.py:2405(mean)
+        8    0.000    0.000    0.000    0.000 {_codecs.utf_8_decode}
+        1    0.000    0.000    0.000    0.000 {zmq.backend.cython._poll.zmq_poll}
+        9    0.000    0.000    0.000    0.000 iostream.py:88(_check_mp_mode)
+        1    0.000    0.000    0.694    0.694 fromnumeric.py:2491(std)
+        1    0.000    0.000    0.000    0.000 {built-in method now}
+        1    0.000    0.000    0.000    0.000 hmac.py:85(copy)
+        4    0.000    0.000    0.000    0.000 encoder.py:106(__init__)
+        1    0.000    0.000    0.000    0.000 session.py:482(sign)
+       10    0.000    0.000    0.000    0.000 iostream.py:79(_is_master_process)
+        1    0.000    0.000    0.000    0.000 attrsettr.py:47(__getattr__)
+        4    0.000    0.000    0.000    0.000 encoder.py:215(encode)
+        1    0.000    0.000    0.000    0.000 session.py:460(msg_header)
+        1    0.000    0.000    0.000    0.000 iostream.py:209(_flush_buffer)
+        1    0.000    0.000    0.000    0.000 iostream.py:105(_flush_from_subprocesses)
+        3    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 {map}
+        1    0.000    0.000    0.000    0.000 iostream.py:82(_is_master_thread)
+       12    0.000    0.000    0.000    0.000 traitlets.py:281(__get__)
+        1    0.000    0.000    0.000    0.000 uuid.py:197(__str__)
+        8    0.000    0.000    0.000    0.000 utf_8.py:15(decode)
+        1    0.000    0.000    0.000    0.000 session.py:425(msg_id)
+        1    0.000    0.000    0.000    0.000 session.py:191(msg_header)
+        1    0.000    0.000    0.000    0.000 session.py:195(extract_header)
+        1    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 hmac.py:97(_current)
+        1    0.000    0.000    0.000    0.000 socket.py:210(send_multipart)
+        4    0.000    0.000    0.000    0.000 hmac.py:80(update)
+        1    0.000    0.000    0.000    0.000 {method 'getvalue' of '_io.StringIO' objects}
+        1    0.000    0.000    0.000    0.000 {method 'isoformat' of 'datetime.datetime' objects}
+        1    0.000    0.000    0.000    0.000 jsonutil.py:94(date_default)
+        1    0.000    0.000    0.000    0.000 iostream.py:218(_new_buffer)
+        1    0.000    0.000    0.000    0.000 {method 'digest' of '_hashlib.HASH' objects}
+        4    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+       10    0.000    0.000    0.000    0.000 {len}
+        8    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 {locals}
+        1    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'close' of '_io.StringIO' objects}
+        4    0.000    0.000    0.000    0.000 {method 'clear' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:983(ident)
+        1    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 hmac.py:116(hexdigest)
+        3    0.000    0.000    0.000    0.000 {method 'copy' of '_hashlib.HASH' objects}
+        1    0.000    0.000    0.000    0.000 {getattr}
+       11    0.000    0.000    0.000    0.000 {posix.getpid}
+        1    0.000    0.000    0.000    0.000 {method 'hexdigest' of '_hashlib.HASH' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {max}
+        1    0.000    0.000    0.000    0.000 hmac.py:27(__init__)
+        1    0.000    0.000    0.000    0.000 py3compat.py:13(no_code)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}

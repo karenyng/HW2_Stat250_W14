@@ -4,7 +4,6 @@
 # trying to parallelize the code
 # PEP8 compliant
 #----------------------------------------------------------------------
-
 import pandas as pd
 import numpy as np
 
@@ -29,7 +28,7 @@ month = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
          'August', 'September', 'October', 'November', 'December']
 year = [data_path + str(i) + "_" +
         mth + ".csv" for i in range(2008, 2013) for mth in month]
-# loop through all the month-by-montyh csv
+# loop through all the month-by-month csv
 for yr_file in year:
     # tell pandas to read only the relevant column in the csv
     temp = pd.read_csv(yr_file, usecols=["ARR_DELAY"])

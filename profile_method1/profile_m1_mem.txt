@@ -1,0 +1,1218 @@
+--------------------------------------------------------------------------------
+Command:            python compute_stat.py
+Massif arguments:   (none)
+ms_print arguments: massif.out.7121
+--------------------------------------------------------------------------------
+
+
+    GB
+7.877^                                                                     #  
+     |                                                                     #  
+     |                                                                     #  
+     |                                                                    @#  
+     |                                                                    @#  
+     |                                                                    @#  
+     |                                                                    @#::
+     |                                                                    @#::
+     |                                                                    @#::
+     |                                                                    @#::
+     |                                                                    @#::
+     |                                                                   @@#::
+     |                                 @                                 @@#::
+     |                                 @                                 @@#::
+     |                                 @                                 @@#::
+     |                                 @           ::::::::::::@:::::::::@@#::
+     |                           ::::::@:::::::::::: :::: ::: :@::: ::: :@@#::
+     |                    :::::::: :: :@:::: :: :: : :::: ::: :@::: ::: :@@#::
+     |             :::::::: ::: :: :: :@:::: :: :: : :::: ::: :@::: ::: :@@#::
+     |     :::::::::: :: :: ::: :: :: :@:::: :: :: : :::: ::: :@::: ::: :@@#::
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   826.9
+
+Number of snapshots: 76
+ Detailed snapshots: [24, 42, 57, 59, 60, 61, 63, 64, 66 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1 16,283,031,422      144,869,816      144,412,351       457,465            0
+  2 34,575,293,569      290,610,752      290,157,336       453,416            0
+  3 46,230,420,513      355,050,544      354,597,717       452,827            0
+  4 66,318,273,997      447,257,440      446,806,622       450,818            0
+  5 89,950,091,013      538,775,968      538,322,559       453,409            0
+  6 105,026,999,000      614,189,248      613,740,028       449,220            0
+  7 119,368,092,764      687,368,504      686,912,317       456,187            0
+  8 137,410,571,834      771,214,120      770,759,726       454,394            0
+  9 148,799,532,231      796,945,552      796,485,942       459,610            0
+ 10 162,951,438,828      873,513,792      873,056,579       457,213            0
+ 11 183,755,709,509      963,215,984      962,757,776       458,208            0
+ 12 202,697,674,032    1,049,714,608    1,049,255,813       458,795            0
+ 13 221,818,301,763    1,134,911,664    1,134,453,242       458,422            0
+ 14 234,740,061,969    1,209,895,432    1,209,442,327       453,105            0
+ 15 255,237,335,740    1,303,310,976    1,302,855,580       455,396            0
+ 16 272,149,502,321    1,392,852,008    1,392,405,329       446,679            0
+ 17 283,835,477,547    1,419,098,120    1,418,646,793       451,327            0
+ 18 298,279,290,304    1,481,797,912    1,481,344,190       453,722            0
+ 19 321,252,516,538    1,606,665,512    1,606,213,055       452,457            0
+ 20 338,729,185,666    1,714,198,368    1,713,746,348       452,020            0
+ 21 357,671,402,467    1,758,564,752    1,758,104,648       460,104            0
+ 22 379,907,886,928    1,867,485,192    1,867,022,681       462,511            0
+ 23 395,145,227,657    1,959,458,712    1,958,997,590       461,122            0
+ 24 411,584,558,650    3,780,309,504    3,779,858,438       451,066            0
+99.99% (3,779,858,438B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.64% (3,728,808,541B) 0x6AB60D9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| ->98.64% (3,728,808,541B) 0x6AC2AEC: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   ->95.48% (3,609,556,272B) 0x6AEBC03: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->95.48% (3,609,556,272B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->95.48% (3,609,556,272B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     ->47.74% (1,804,778,136B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->47.74% (1,804,778,136B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |   ->47.74% (1,804,778,136B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->47.74% (1,804,778,136B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       ->47.74% (1,804,778,136B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |         ->47.74% (1,804,778,136B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |           ->47.74% (1,804,778,136B) 0x4E1018: ??? (in /usr/bin/python2.7)
+|   |     |             ->47.74% (1,804,778,136B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |     |               ->47.74% (1,804,778,136B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |     |                 ->47.74% (1,804,778,136B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |     |                   ->47.74% (1,804,778,136B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |                     ->47.74% (1,804,778,136B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                       ->47.74% (1,804,778,136B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |                         ->47.74% (1,804,778,136B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                           ->47.74% (1,804,778,136B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |                             ->47.74% (1,804,778,136B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                               ->47.74% (1,804,778,136B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |                                 ->47.74% (1,804,778,136B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |                                   ->47.74% (1,804,778,136B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |                                     ->47.74% (1,804,778,136B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |                                       ->47.74% (1,804,778,136B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |                                         ->47.74% (1,804,778,136B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |                                           
+|   |     ->47.74% (1,804,778,136B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->47.74% (1,804,778,136B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |   ->47.74% (1,804,778,136B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->47.74% (1,804,778,136B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       ->47.74% (1,804,778,136B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |         ->47.74% (1,804,778,136B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |           ->47.74% (1,804,778,136B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |             ->47.74% (1,804,778,136B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |               ->47.74% (1,804,778,136B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                 ->47.74% (1,804,778,136B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |                   ->47.74% (1,804,778,136B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                     ->47.74% (1,804,778,136B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |                       ->47.74% (1,804,778,136B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |                         ->47.74% (1,804,778,136B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |                           ->47.74% (1,804,778,136B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |                             ->47.74% (1,804,778,136B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |                               ->47.74% (1,804,778,136B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |                                 
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->01.58% (59,625,904B) 0x6ADC338: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->01.58% (59,625,904B) 0x6ADC4A3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->01.58% (59,625,720B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->01.58% (59,625,720B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | | ->01.58% (59,625,720B) 0x47CFB8: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |   ->01.58% (59,625,720B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |     ->01.58% (59,625,720B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |       ->01.58% (59,625,720B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |         ->01.58% (59,625,720B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |           ->01.58% (59,625,720B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |             ->01.58% (59,625,720B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |               ->01.58% (59,625,720B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |                 ->01.58% (59,625,720B) 0x4E1018: ??? (in /usr/bin/python2.7)
+|   |   | |                   ->01.58% (59,625,720B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   | |                     ->01.58% (59,625,720B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |   | |                       ->01.58% (59,625,720B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |   | |                         ->01.58% (59,625,720B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |                           ->01.58% (59,625,720B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |                             ->01.58% (59,625,720B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |                               ->01.58% (59,625,720B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |                                 ->01.58% (59,625,720B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |                                   ->01.58% (59,625,720B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |                                     ->01.58% (59,625,720B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |                                       ->01.58% (59,625,720B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   | |                                         ->01.58% (59,625,720B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   | |                                           ->01.58% (59,625,720B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   | |                                             ->01.58% (59,625,720B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   | |                                               ->01.58% (59,625,720B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   | |                                                 
+|   |   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | 
+|   |   ->00.00% (184B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->01.58% (59,625,720B) 0x6B199AF: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->01.58% (59,625,720B) 0x6B1A6A7: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->01.58% (59,625,720B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     ->01.58% (59,625,720B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |       ->01.58% (59,625,720B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |         ->01.58% (59,625,720B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |           ->01.58% (59,625,720B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |             ->01.58% (59,625,720B) 0x4E1018: ??? (in /usr/bin/python2.7)
+|   |               ->01.58% (59,625,720B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |                 ->01.58% (59,625,720B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |                   ->01.58% (59,625,720B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |                     ->01.58% (59,625,720B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |                       ->01.58% (59,625,720B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |                         ->01.58% (59,625,720B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |                           ->01.58% (59,625,720B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |                             ->01.58% (59,625,720B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |                               ->01.58% (59,625,720B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |                                 ->01.58% (59,625,720B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |                                   ->01.58% (59,625,720B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |                                     ->01.58% (59,625,720B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |                                       ->01.58% (59,625,720B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |                                         ->01.58% (59,625,720B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |                                           ->01.58% (59,625,720B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |                                             ->01.58% (59,625,720B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |                                               
+|   ->00.00% (645B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.35% (51,049,897B) in 155 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 25 422,338,112,932    1,963,377,344    1,962,911,709       465,635            0
+ 26 437,624,265,568    1,982,442,320    1,981,978,439       463,881            0
+ 27 454,997,301,858    2,002,677,880    2,002,214,781       463,099            0
+ 28 465,470,966,272    2,013,963,320    2,013,502,534       460,786            0
+ 29 481,367,717,347    2,033,732,584    2,033,274,240       458,344            0
+ 30 505,519,656,354    2,064,744,816    2,064,284,764       460,052            0
+ 31 524,415,447,446    2,089,149,280    2,088,686,907       462,373            0
+ 32 538,479,502,368    2,106,272,576    2,105,807,597       464,979            0
+ 33 559,645,188,751    2,128,886,280    2,128,419,823       466,457            0
+ 34 580,708,725,513    2,157,545,032    2,157,084,355       460,677            0
+ 35 592,443,492,580    2,169,292,320    2,168,825,280       467,040            0
+ 36 606,532,024,338    2,185,228,696    2,184,763,418       465,278            0
+ 37 627,566,723,031    2,211,995,736    2,211,527,897       467,839            0
+ 38 641,640,208,918    2,229,956,088    2,229,499,572       456,516            0
+ 39 662,737,438,921    2,255,542,312    2,255,088,803       453,509            0
+ 40 676,960,688,885    2,272,608,880    2,272,155,429       453,451            0
+ 41 694,624,310,840    2,294,981,112    2,294,529,228       451,884            0
+ 42 705,250,045,779    2,309,559,008    2,309,102,758       456,250            0
+99.98% (2,309,102,758B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->96.62% (2,231,560,917B) 0x6AB60D9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| ->96.62% (2,231,560,917B) 0x6AC2AEC: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   ->96.25% (2,223,033,728B) 0x6AEBC03: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->96.25% (2,223,033,728B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->96.25% (2,223,033,728B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     ->48.13% (1,111,516,864B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->48.13% (1,111,516,864B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |   ->48.13% (1,111,516,864B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->48.13% (1,111,516,864B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       ->48.13% (1,111,516,864B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |         ->48.13% (1,111,516,864B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |           ->48.13% (1,111,516,864B) 0x4E1018: ??? (in /usr/bin/python2.7)
+|   |     |             ->48.13% (1,111,516,864B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |     |               ->48.13% (1,111,516,864B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |     |                 ->48.13% (1,111,516,864B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |     |                   ->48.13% (1,111,516,864B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |                     ->48.13% (1,111,516,864B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                       ->48.13% (1,111,516,864B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |                         ->48.13% (1,111,516,864B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                           ->48.13% (1,111,516,864B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |                             ->48.13% (1,111,516,864B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                               ->48.13% (1,111,516,864B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |                                 ->48.13% (1,111,516,864B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |                                   ->48.13% (1,111,516,864B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |                                     ->48.13% (1,111,516,864B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |                                       ->48.13% (1,111,516,864B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |                                         ->48.13% (1,111,516,864B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |                                           
+|   |     ->48.13% (1,111,516,864B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->48.13% (1,111,516,864B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |   ->48.13% (1,111,516,864B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->48.13% (1,111,516,864B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       ->48.13% (1,111,516,864B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |         ->48.13% (1,111,516,864B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |           ->48.13% (1,111,516,864B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |             ->48.13% (1,111,516,864B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |               ->48.13% (1,111,516,864B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                 ->48.13% (1,111,516,864B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |                   ->48.13% (1,111,516,864B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |                     ->48.13% (1,111,516,864B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |                       ->48.13% (1,111,516,864B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |                         ->48.13% (1,111,516,864B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |                           ->48.13% (1,111,516,864B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |                             ->48.13% (1,111,516,864B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |                               ->48.13% (1,111,516,864B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |                                 
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->00.37% (8,527,189B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.38% (31,759,872B) 0x4A261A: ??? (in /usr/bin/python2.7)
+| ->01.37% (31,740,032B) 0x4A2DC7: PyInt_FromLong (in /usr/bin/python2.7)
+| | ->01.37% (31,733,088B) 0x6AD0084: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| | | ->01.37% (31,733,088B) 0x6AD00CD: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| | |   ->01.37% (31,733,088B) 0x6AE93CA: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| | |     ->01.37% (31,733,088B) 0x6AEBC5A: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| | |       ->01.37% (31,733,088B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| | |         ->01.37% (31,733,088B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| | |           ->01.37% (31,733,088B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+| | |             ->01.37% (31,733,088B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+| | |               ->01.37% (31,733,088B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+| | |                 ->01.37% (31,733,088B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+| | |                   ->01.37% (31,733,088B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+| | |                     ->01.37% (31,733,088B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+| | |                       ->01.37% (31,733,088B) 0x4E1018: ??? (in /usr/bin/python2.7)
+| | |                         ->01.37% (31,733,088B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+| | |                           ->01.37% (31,733,088B) 0x4A0532: ??? (in /usr/bin/python2.7)
+| | |                             ->01.37% (31,733,088B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+| | |                               ->01.37% (31,733,088B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+| | |                                 ->01.37% (31,733,088B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+| | |                                   ->01.37% (31,733,088B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+| | |                                     ->01.37% (31,733,088B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+| | |                                       ->01.37% (31,733,088B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+| | |                                         ->01.37% (31,733,088B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+| | |                                           ->01.37% (31,733,088B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+| | |                                             ->01.37% (31,733,088B) 0x540389: ??? (in /usr/bin/python2.7)
+| | |                                               ->01.37% (31,733,088B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+| | |                                                 ->01.37% (31,733,088B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+| | |                                                   ->01.37% (31,733,088B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+| | |                                                     ->01.37% (31,733,088B) 0x598FEA3: (below main) (libc-start.c:260)
+| | |                                                       
+| | ->00.00% (6,944B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.00% (19,840B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.14% (26,214,400B) 0xC40BC94: ??? (in /usr/lib/python2.7/dist-packages/pandas/_parser.so)
+| ->01.14% (26,214,400B) in 8 places, all below massif's threshold (01.00%)
+|   
+->00.85% (19,567,569B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43 722,878,229,888    2,329,434,440    2,328,976,428       458,012            0
+ 44 733,534,164,396    2,343,097,448    2,342,646,386       451,062            0
+ 45 747,645,657,962    2,359,391,984    2,358,938,740       453,244            0
+ 46 765,301,436,809    2,381,447,448    2,380,993,739       453,709            0
+ 47 779,456,616,710    2,398,923,256    2,398,465,421       457,835            0
+ 48 797,080,852,781    2,418,365,392    2,417,904,719       460,673            0
+ 49 818,277,982,606    2,443,260,344    2,442,800,238       460,106            0
+ 50 820,180,253,285    2,448,880,408    2,448,425,059       455,349            0
+ 51 822,094,549,504    2,450,063,368    2,449,607,219       456,149            0
+ 52 824,008,929,387    2,451,246,376    2,450,789,387       456,989            0
+ 53 825,988,261,388    2,455,857,480    2,455,403,280       454,200            0
+ 54 827,908,689,813    2,457,040,440    2,456,585,480       454,960            0
+ 55 829,830,103,397    2,458,223,456    2,457,767,632       455,824            0
+ 56 831,751,169,214    2,459,406,112    2,458,949,624       456,488            0
+ 57 833,698,810,950    3,626,238,304    3,625,791,922       446,382            0
+99.99% (3,625,791,922B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.58% (3,574,726,301B) 0x6AB60D9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| ->98.58% (3,574,726,301B) 0x6AC2AEC: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   ->32.90% (1,192,893,040B) 0x6B199AF: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->32.90% (1,192,893,040B) 0x6B1A6A7: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->32.79% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->32.79% (1,188,939,296B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   ->32.79% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |     ->32.79% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |       ->32.79% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |         ->32.79% (1,188,939,296B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |           ->32.79% (1,188,939,296B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |             ->32.79% (1,188,939,296B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |   |               ->32.79% (1,188,939,296B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |   |                 ->32.79% (1,188,939,296B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |                   ->32.79% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |                     ->32.79% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |                       ->32.79% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |                         ->32.79% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |                           ->32.79% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |                             ->32.79% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |                               ->32.79% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |                                 
+|   |   ->00.11% (3,953,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->32.79% (1,188,939,296B) 0x6AC3546: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->32.79% (1,188,939,296B) 0x6AEB45A: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | | ->32.79% (1,188,939,296B) 0x6AFD458: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |   ->32.79% (1,188,939,296B) 0x6B03DD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |     ->32.79% (1,188,939,296B) 0x6B04D31: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |       ->32.79% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   | |         ->32.79% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   | |           ->32.79% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   | |             ->32.79% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   | |               ->32.79% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   | |                 ->32.79% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   | |                   ->32.79% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   | |                     ->32.79% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   | |                       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->32.79% (1,188,939,296B) 0x6AEBC03: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->32.79% (1,188,939,296B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->32.79% (1,188,939,296B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     ->32.79% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->32.79% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |   ->32.79% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->32.79% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |     | ->32.79% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |     |   ->32.79% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |     |     ->32.79% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |     |       ->32.79% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |     |         ->32.79% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |     |           ->32.79% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |     |             
+|   |     |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |     
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->00.11% (3,954,669B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.41% (51,065,621B) in 155 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 58 836,225,446,610    3,774,862,144    3,774,413,742       448,402            0
+ 59 837,265,769,687    3,923,481,408    3,923,031,202       450,206            0
+99.99% (3,923,031,202B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.69% (3,871,961,133B) 0x6AB60D9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| ->98.69% (3,871,961,133B) 0x6AC2AEC: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   ->30.40% (1,192,893,048B) 0x6B199AF: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->30.40% (1,192,893,048B) 0x6B1A6A7: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->30.30% (1,188,939,304B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->30.30% (1,188,939,304B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   ->30.30% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |     ->30.30% (1,188,939,304B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |       ->30.30% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |         ->30.30% (1,188,939,304B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |           ->30.30% (1,188,939,304B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |             ->30.30% (1,188,939,304B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |   |               ->30.30% (1,188,939,304B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |   |                 ->30.30% (1,188,939,304B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |                   ->30.30% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |                     ->30.30% (1,188,939,304B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |                       ->30.30% (1,188,939,304B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |                         ->30.30% (1,188,939,304B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |                           ->30.30% (1,188,939,304B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |                             ->30.30% (1,188,939,304B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |                               ->30.30% (1,188,939,304B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |                                 
+|   |   ->00.10% (3,953,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->30.30% (1,188,939,296B) 0x6AC3546: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->30.30% (1,188,939,296B) 0x6AEB45A: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | | ->30.30% (1,188,939,296B) 0x6AFD458: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |   ->30.30% (1,188,939,296B) 0x6B03DD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |     ->30.30% (1,188,939,296B) 0x6B04D31: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |       ->30.30% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   | |         ->30.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   | |           ->30.30% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   | |             ->30.30% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   | |               ->30.30% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   | |                 ->30.30% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   | |                   ->30.30% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   | |                     ->30.30% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   | |                       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->30.30% (1,188,939,296B) 0x6AEBC03: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->30.30% (1,188,939,296B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->30.30% (1,188,939,296B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     ->30.30% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->30.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |   ->30.30% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->30.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |     | ->30.30% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |     |   ->30.30% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |     |     ->30.30% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |     |       ->30.30% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |     |         ->30.30% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |     |           ->30.30% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |     |             
+|   |     |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |     
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->07.58% (297,234,824B) 0x6FC8975: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->07.58% (297,234,824B) 0x6FC8F46: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   |   ->03.79% (148,617,412B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->03.79% (148,617,412B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | | ->03.79% (148,617,412B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |   ->03.79% (148,617,412B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |     ->03.79% (148,617,412B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |       ->03.79% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |         ->03.79% (148,617,412B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |           ->03.79% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |             ->03.79% (148,617,412B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |               ->03.79% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |                 ->03.79% (148,617,412B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   | |                   ->03.79% (148,617,412B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   | |                     ->03.79% (148,617,412B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   | |                       ->03.79% (148,617,412B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   | |                         ->03.79% (148,617,412B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   | |                           ->03.79% (148,617,412B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   | |                             
+|   |   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | 
+|   |   ->03.79% (148,617,412B) 0x4A0105: ??? (in /usr/bin/python2.7)
+|   |   | ->03.79% (148,617,412B) 0x4FFA33: _PyObject_CallFunction_SizeT (in /usr/bin/python2.7)
+|   |   |   ->03.79% (148,617,412B) 0x47D80F: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | ->03.79% (148,617,412B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   |   ->03.79% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   |     ->03.79% (148,617,412B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   |       ->03.79% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   |         ->03.79% (148,617,412B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   |           ->03.79% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   |             ->03.79% (148,617,412B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |   |               ->03.79% (148,617,412B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |   |                 ->03.79% (148,617,412B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |   |                   ->03.79% (148,617,412B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |   |                     ->03.79% (148,617,412B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |   |                       ->03.79% (148,617,412B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |   |                         
+|   |   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->00.10% (3,954,669B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.30% (51,070,069B) in 155 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 60 839,952,276,842    4,963,870,408    4,963,419,518       450,890            0
+99.99% (4,963,419,518B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.96% (4,912,283,017B) 0x6AB60D9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| ->98.96% (4,912,283,017B) 0x6AC2AEC: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   ->24.03% (1,192,893,048B) 0x6B199AF: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->24.03% (1,192,893,048B) 0x6B1A6A7: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->23.95% (1,188,939,304B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->23.95% (1,188,939,304B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   ->23.95% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |     ->23.95% (1,188,939,304B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |       ->23.95% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |         ->23.95% (1,188,939,304B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |           ->23.95% (1,188,939,304B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |             ->23.95% (1,188,939,304B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |   |               ->23.95% (1,188,939,304B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |   |                 ->23.95% (1,188,939,304B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |                   ->23.95% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |                     ->23.95% (1,188,939,304B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |                       ->23.95% (1,188,939,304B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |                         ->23.95% (1,188,939,304B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |                           ->23.95% (1,188,939,304B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |                             ->23.95% (1,188,939,304B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |                               ->23.95% (1,188,939,304B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |                                 
+|   |   ->00.08% (3,953,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->23.95% (1,188,939,296B) 0x6FCB3E9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->23.95% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   ->23.95% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     ->23.95% (1,188,939,296B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |     | ->23.95% (1,188,939,296B) 0x4ABF94: PyObject_Call (in /usr/bin/python2.7)
+|   |     |   ->23.95% (1,188,939,296B) 0x6AADF29: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     |     ->23.95% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       ->23.95% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       | ->23.95% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |   ->23.95% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |     ->23.95% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |       ->23.95% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |       | ->23.95% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |       |       |   ->23.95% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |       |       |     ->23.95% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |       ->23.95% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |         ->23.95% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |       |       |           ->23.95% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |       |       |             
+|   |     |       |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       |       
+|   |     |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->23.95% (1,188,939,296B) 0x6AC3546: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->23.95% (1,188,939,296B) 0x6AEB45A: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | | ->23.95% (1,188,939,296B) 0x6AFD458: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |   ->23.95% (1,188,939,296B) 0x6B03DD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |     ->23.95% (1,188,939,296B) 0x6B04D31: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |       ->23.95% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   | |         ->23.95% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   | |           ->23.95% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   | |             ->23.95% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   | |               ->23.95% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   | |                 ->23.95% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   | |                   ->23.95% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   | |                     ->23.95% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   | |                       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->23.95% (1,188,939,296B) 0x6AEBC03: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->23.95% (1,188,939,296B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->23.95% (1,188,939,296B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     ->23.95% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->23.95% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |   ->23.95% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->23.95% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |     | ->23.95% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |     |   ->23.95% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |     |     ->23.95% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |     |       ->23.95% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |     |         ->23.95% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |     |           ->23.95% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |     |             
+|   |     |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |     
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->02.99% (148,617,412B) 0x6FC8975: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->02.99% (148,617,412B) 0x6FC8F46: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   |   ->02.99% (148,617,412B) 0x4A0105: ??? (in /usr/bin/python2.7)
+|   |   | ->02.99% (148,617,412B) 0x4FFA33: _PyObject_CallFunction_SizeT (in /usr/bin/python2.7)
+|   |   |   ->02.99% (148,617,412B) 0x47D80F: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | ->02.99% (148,617,412B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   |   ->02.99% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   |     ->02.99% (148,617,412B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   |       ->02.99% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   |         ->02.99% (148,617,412B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   |           ->02.99% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   |             ->02.99% (148,617,412B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |   |               ->02.99% (148,617,412B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |   |                 ->02.99% (148,617,412B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |   |                   ->02.99% (148,617,412B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |   |                     ->02.99% (148,617,412B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |   |                       ->02.99% (148,617,412B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |   |                         
+|   |   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->00.08% (3,954,669B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.03% (51,136,501B) in 156 places, all below massif's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61 842,627,474,496    5,112,425,912    5,111,973,090       452,822            0
+99.99% (5,111,973,090B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.99% (5,060,900,437B) 0x6AB60D9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| ->98.99% (5,060,900,437B) 0x6AC2AEC: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   ->23.33% (1,192,893,048B) 0x6B199AF: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->23.33% (1,192,893,048B) 0x6B1A6A7: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->23.26% (1,188,939,304B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->23.26% (1,188,939,304B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   ->23.26% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |     ->23.26% (1,188,939,304B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |       ->23.26% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |         ->23.26% (1,188,939,304B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |           ->23.26% (1,188,939,304B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |             ->23.26% (1,188,939,304B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |   |               ->23.26% (1,188,939,304B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |   |                 ->23.26% (1,188,939,304B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |                   ->23.26% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |                     ->23.26% (1,188,939,304B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |                       ->23.26% (1,188,939,304B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |                         ->23.26% (1,188,939,304B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |                           ->23.26% (1,188,939,304B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |                             ->23.26% (1,188,939,304B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |                               ->23.26% (1,188,939,304B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |                                 
+|   |   ->00.08% (3,953,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->23.26% (1,188,939,296B) 0x6FCB3E9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->23.26% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   ->23.26% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     ->23.26% (1,188,939,296B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |     | ->23.26% (1,188,939,296B) 0x4ABF94: PyObject_Call (in /usr/bin/python2.7)
+|   |     |   ->23.26% (1,188,939,296B) 0x6AADF29: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     |     ->23.26% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       ->23.26% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       | ->23.26% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |   ->23.26% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |     ->23.26% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |       ->23.26% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |       | ->23.26% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |       |       |   ->23.26% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |       |       |     ->23.26% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |       ->23.26% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |         ->23.26% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |       |       |           ->23.26% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |       |       |             
+|   |     |       |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       |       
+|   |     |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->23.26% (1,188,939,296B) 0x6AC3546: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->23.26% (1,188,939,296B) 0x6AEB45A: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | | ->23.26% (1,188,939,296B) 0x6AFD458: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |   ->23.26% (1,188,939,296B) 0x6B03DD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |     ->23.26% (1,188,939,296B) 0x6B04D31: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |       ->23.26% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   | |         ->23.26% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   | |           ->23.26% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   | |             ->23.26% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   | |               ->23.26% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   | |                 ->23.26% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   | |                   ->23.26% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   | |                     ->23.26% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   | |                       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->23.26% (1,188,939,296B) 0x6AEBC03: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->23.26% (1,188,939,296B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->23.26% (1,188,939,296B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     ->23.26% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->23.26% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |   ->23.26% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->23.26% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |     | ->23.26% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |     |   ->23.26% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |     |     ->23.26% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |     |       ->23.26% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |     |         ->23.26% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |     |           ->23.26% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |     |             
+|   |     |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |     
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->05.81% (297,234,824B) 0x6FC8CD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->05.81% (297,234,824B) 0x6FC8F46: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   |   ->05.81% (297,234,824B) 0x4A0105: ??? (in /usr/bin/python2.7)
+|   |   | ->05.81% (297,234,824B) 0x4FFA33: _PyObject_CallFunction_SizeT (in /usr/bin/python2.7)
+|   |   |   ->05.81% (297,234,824B) 0x6B1320B: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   |   | ->05.81% (297,234,824B) 0x4DE449: ??? (in /usr/bin/python2.7)
+|   |   |   | | ->05.81% (297,234,824B) 0x4C819C: PyObject_RichCompare (in /usr/bin/python2.7)
+|   |   |   | |   ->05.81% (297,234,824B) 0x51798A: ??? (in /usr/bin/python2.7)
+|   |   |   | |   | ->05.81% (297,234,824B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |   ->05.81% (297,234,824B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |     ->05.81% (297,234,824B) 0x47CFB8: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |       ->05.81% (297,234,824B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |         ->05.81% (297,234,824B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |           ->05.81% (297,234,824B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |             ->05.81% (297,234,824B) 0x4A071E: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |               ->05.81% (297,234,824B) 0x4A0813: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                 ->05.81% (297,234,824B) 0x4DE449: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                   ->05.81% (297,234,824B) 0x4C819C: PyObject_RichCompare (in /usr/bin/python2.7)
+|   |   |   | |   |                     ->05.81% (297,234,824B) 0x47BAFD: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |                       ->05.81% (297,234,824B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |                         ->05.81% (297,234,824B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |                           ->05.81% (297,234,824B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |                             ->05.81% (297,234,824B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |   | |   |                               ->05.81% (297,234,824B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                                 ->05.81% (297,234,824B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |   | |   |                                   ->05.81% (297,234,824B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |   | |   |                                     ->05.81% (297,234,824B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |   | |   |                                       ->05.81% (297,234,824B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |   | |   |                                         
+|   |   |   | |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   | |   
+|   |   |   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   | 
+|   |   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->00.08% (3,954,677B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.00% (51,072,653B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 62 845,742,395,150    6,128,406,312    6,127,952,518       453,794            0
+ 63 845,742,402,754    6,128,406,856    6,127,953,046       453,810            0
+99.99% (6,127,953,046B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->99.16% (6,076,879,481B) 0x6AB60D9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| ->99.16% (6,076,879,481B) 0x6AC2AEC: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   ->19.46% (1,192,893,048B) 0x6B199AF: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->19.46% (1,192,893,048B) 0x6B1A6A7: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->19.40% (1,188,939,304B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->19.40% (1,188,939,304B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   ->19.40% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |     ->19.40% (1,188,939,304B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |       ->19.40% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |         ->19.40% (1,188,939,304B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |           ->19.40% (1,188,939,304B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |             ->19.40% (1,188,939,304B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |   |               ->19.40% (1,188,939,304B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |   |                 ->19.40% (1,188,939,304B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |                   ->19.40% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |                     ->19.40% (1,188,939,304B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |                       ->19.40% (1,188,939,304B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |                         ->19.40% (1,188,939,304B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |                           ->19.40% (1,188,939,304B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |                             ->19.40% (1,188,939,304B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |                               ->19.40% (1,188,939,304B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |                                 
+|   |   ->00.06% (3,953,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->19.40% (1,188,939,296B) 0x6AC3546: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->19.40% (1,188,939,296B) 0x6AEB45A: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | | ->19.40% (1,188,939,296B) 0x6AFD458: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |   ->19.40% (1,188,939,296B) 0x6B03DD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |     ->19.40% (1,188,939,296B) 0x6B04D31: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |       ->19.40% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   | |         ->19.40% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   | |           ->19.40% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   | |             ->19.40% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   | |               ->19.40% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   | |                 ->19.40% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   | |                   ->19.40% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   | |                     ->19.40% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   | |                       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->19.40% (1,188,939,296B) 0x6AEBC03: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->19.40% (1,188,939,296B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->19.40% (1,188,939,296B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     ->19.40% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->19.40% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |   ->19.40% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->19.40% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |     | ->19.40% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |     |   ->19.40% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |     |     ->19.40% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |     |       ->19.40% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |     |         ->19.40% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |     |           ->19.40% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |     |             
+|   |     |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |     
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->19.40% (1,188,939,296B) 0x6FCB3E9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->19.40% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   ->19.40% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     ->19.40% (1,188,939,296B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |     | ->19.40% (1,188,939,296B) 0x4ABF94: PyObject_Call (in /usr/bin/python2.7)
+|   |     |   ->19.40% (1,188,939,296B) 0x6AADF29: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     |     ->19.40% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       ->19.40% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       | ->19.40% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |   ->19.40% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |     ->19.40% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |       ->19.40% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |       | ->19.40% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |       |       |   ->19.40% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |       |       |     ->19.40% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |       ->19.40% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |         ->19.40% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |       |       |           ->19.40% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |       |       |             
+|   |     |       |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       |       
+|   |     |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->19.00% (1,164,596,464B) 0x6AEFA63: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->19.00% (1,164,596,464B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   ->19.00% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     ->19.00% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |       ->19.00% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |         ->19.00% (1,164,596,464B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |           ->19.00% (1,164,596,464B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |             ->19.00% (1,164,596,464B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |               ->19.00% (1,164,596,464B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |                 ->19.00% (1,164,596,464B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |                   ->19.00% (1,164,596,464B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |                     
+|   ->02.43% (148,617,412B) 0x6FC8CD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->02.43% (148,617,412B) 0x6FC8F46: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   |   ->02.43% (148,617,412B) 0x4A0105: ??? (in /usr/bin/python2.7)
+|   |   | ->02.43% (148,617,412B) 0x4FFA33: _PyObject_CallFunction_SizeT (in /usr/bin/python2.7)
+|   |   |   ->02.43% (148,617,412B) 0x6B1320B: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   |   | ->02.43% (148,617,412B) 0x4DE449: ??? (in /usr/bin/python2.7)
+|   |   |   | | ->02.43% (148,617,412B) 0x4C819C: PyObject_RichCompare (in /usr/bin/python2.7)
+|   |   |   | |   ->02.43% (148,617,412B) 0x51798A: ??? (in /usr/bin/python2.7)
+|   |   |   | |   | ->02.43% (148,617,412B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |   ->02.43% (148,617,412B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |     ->02.43% (148,617,412B) 0x47CFB8: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |       ->02.43% (148,617,412B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |         ->02.43% (148,617,412B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |           ->02.43% (148,617,412B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |             ->02.43% (148,617,412B) 0x4A071E: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |               ->02.43% (148,617,412B) 0x4A0813: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                 ->02.43% (148,617,412B) 0x4DE449: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                   ->02.43% (148,617,412B) 0x4C819C: PyObject_RichCompare (in /usr/bin/python2.7)
+|   |   |   | |   |                     ->02.43% (148,617,412B) 0x47BAFD: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |                       ->02.43% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |                         ->02.43% (148,617,412B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |                           ->02.43% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |                             ->02.43% (148,617,412B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |   | |   |                               ->02.43% (148,617,412B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                                 ->02.43% (148,617,412B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |   | |   |                                   ->02.43% (148,617,412B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |   | |   |                                     ->02.43% (148,617,412B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |   | |   |                                       ->02.43% (148,617,412B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |   | |   |                                         
+|   |   |   | |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   | |   
+|   |   |   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   | 
+|   |   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->00.06% (3,954,669B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.83% (51,073,565B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 64 845,742,426,584    7,293,006,936    7,292,550,310       456,626            0
+99.99% (7,292,550,310B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->99.29% (7,241,475,945B) 0x6AB60D9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| ->99.29% (7,241,475,945B) 0x6AC2AEC: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   ->16.36% (1,192,893,048B) 0x6B199AF: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->16.36% (1,192,893,048B) 0x6B1A6A7: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->16.30% (1,188,939,304B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->16.30% (1,188,939,304B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   ->16.30% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |     ->16.30% (1,188,939,304B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |       ->16.30% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |         ->16.30% (1,188,939,304B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |           ->16.30% (1,188,939,304B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |             ->16.30% (1,188,939,304B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |   |               ->16.30% (1,188,939,304B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |   |                 ->16.30% (1,188,939,304B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |                   ->16.30% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |                     ->16.30% (1,188,939,304B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |                       ->16.30% (1,188,939,304B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |                         ->16.30% (1,188,939,304B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |                           ->16.30% (1,188,939,304B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |                             ->16.30% (1,188,939,304B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |                               ->16.30% (1,188,939,304B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |                                 
+|   |   ->00.05% (3,953,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->16.30% (1,188,939,296B) 0x6AEBC03: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->16.30% (1,188,939,296B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->16.30% (1,188,939,296B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     ->16.30% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->16.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |   ->16.30% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->16.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |     | ->16.30% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |     |   ->16.30% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |     |     ->16.30% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |     |       ->16.30% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |     |         ->16.30% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |     |           ->16.30% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |     |             
+|   |     |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |     
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->16.30% (1,188,939,296B) 0x6FCB3E9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->16.30% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   ->16.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     ->16.30% (1,188,939,296B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |     | ->16.30% (1,188,939,296B) 0x4ABF94: PyObject_Call (in /usr/bin/python2.7)
+|   |     |   ->16.30% (1,188,939,296B) 0x6AADF29: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     |     ->16.30% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       ->16.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       | ->16.30% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |   ->16.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |     ->16.30% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |       ->16.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |       | ->16.30% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |       |       |   ->16.30% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |       |       |     ->16.30% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |       ->16.30% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |         ->16.30% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |       |       |           ->16.30% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |       |       |             
+|   |     |       |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       |       
+|   |     |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->16.30% (1,188,939,296B) 0x6AC3546: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->16.30% (1,188,939,296B) 0x6AEB45A: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | | ->16.30% (1,188,939,296B) 0x6AFD458: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |   ->16.30% (1,188,939,296B) 0x6B03DD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |     ->16.30% (1,188,939,296B) 0x6B04D31: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |       ->16.30% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   | |         ->16.30% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   | |           ->16.30% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   | |             ->16.30% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   | |               ->16.30% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   | |                 ->16.30% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   | |                   ->16.30% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   | |                     ->16.30% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   | |                       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->16.02% (1,168,550,496B) 0x6ADC338: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->16.02% (1,168,550,496B) 0x6ADC4A3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->16.02% (1,168,550,208B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->15.97% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | | ->15.97% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |   ->15.97% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |     ->15.97% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |       ->15.97% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |         ->15.97% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |           ->15.97% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |           | ->15.97% (1,164,596,464B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   | |           |   ->15.97% (1,164,596,464B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   | |           |     ->15.97% (1,164,596,464B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   | |           |       ->15.97% (1,164,596,464B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   | |           |         ->15.97% (1,164,596,464B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   | |           |           ->15.97% (1,164,596,464B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   | |           |             
+|   |   | |           ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | |           
+|   |   | ->00.05% (3,953,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | 
+|   |   ->00.00% (288B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->15.97% (1,164,596,464B) 0x6AEFA63: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->15.97% (1,164,596,464B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   ->15.97% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     ->15.97% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |       ->15.97% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |         ->15.97% (1,164,596,464B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |           ->15.97% (1,164,596,464B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |             ->15.97% (1,164,596,464B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |               ->15.97% (1,164,596,464B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |                 ->15.97% (1,164,596,464B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |                   ->15.97% (1,164,596,464B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |                     
+|   ->02.04% (148,617,412B) 0x6FC8CD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->02.04% (148,617,412B) 0x6FC8F46: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   |   ->02.04% (148,617,412B) 0x4A0105: ??? (in /usr/bin/python2.7)
+|   |   | ->02.04% (148,617,412B) 0x4FFA33: _PyObject_CallFunction_SizeT (in /usr/bin/python2.7)
+|   |   |   ->02.04% (148,617,412B) 0x6B1320B: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   |   | ->02.04% (148,617,412B) 0x4DE449: ??? (in /usr/bin/python2.7)
+|   |   |   | | ->02.04% (148,617,412B) 0x4C819C: PyObject_RichCompare (in /usr/bin/python2.7)
+|   |   |   | |   ->02.04% (148,617,412B) 0x51798A: ??? (in /usr/bin/python2.7)
+|   |   |   | |   | ->02.04% (148,617,412B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |   ->02.04% (148,617,412B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |     ->02.04% (148,617,412B) 0x47CFB8: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |       ->02.04% (148,617,412B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |         ->02.04% (148,617,412B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |           ->02.04% (148,617,412B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |             ->02.04% (148,617,412B) 0x4A071E: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |               ->02.04% (148,617,412B) 0x4A0813: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                 ->02.04% (148,617,412B) 0x4DE449: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                   ->02.04% (148,617,412B) 0x4C819C: PyObject_RichCompare (in /usr/bin/python2.7)
+|   |   |   | |   |                     ->02.04% (148,617,412B) 0x47BAFD: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |                       ->02.04% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |                         ->02.04% (148,617,412B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |                           ->02.04% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |                             ->02.04% (148,617,412B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |   | |   |                               ->02.04% (148,617,412B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                                 ->02.04% (148,617,412B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |   | |   |                                   ->02.04% (148,617,412B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |   | |   |                                     ->02.04% (148,617,412B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |   | |   |                                       ->02.04% (148,617,412B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |   | |   |                                         
+|   |   |   | |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   | |   
+|   |   |   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   | 
+|   |   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->00.00% (637B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.70% (51,074,365B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 65 849,236,223,956    7,293,007,824    7,292,551,057       456,767            0
+ 66 853,749,042,900    8,457,607,528    8,457,147,984       459,544            0
+99.99% (8,457,147,984B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->99.39% (8,406,072,409B) 0x6AB60D9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+| ->99.39% (8,406,072,409B) 0x6AC2AEC: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   ->14.10% (1,192,893,048B) 0x6B199AF: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->14.10% (1,192,893,048B) 0x6B1A6A7: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->14.06% (1,188,939,304B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->14.06% (1,188,939,304B) 0x47C11D: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   ->14.06% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |     ->14.06% (1,188,939,304B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |       ->14.06% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |         ->14.06% (1,188,939,304B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |           ->14.06% (1,188,939,304B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |             ->14.06% (1,188,939,304B) 0x4A0532: ??? (in /usr/bin/python2.7)
+|   |   |               ->14.06% (1,188,939,304B) 0x4AE24C: ??? (in /usr/bin/python2.7)
+|   |   |                 ->14.06% (1,188,939,304B) 0x47BF29: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |                   ->14.06% (1,188,939,304B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |                     ->14.06% (1,188,939,304B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |                       ->14.06% (1,188,939,304B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |                         ->14.06% (1,188,939,304B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |                           ->14.06% (1,188,939,304B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |                             ->14.06% (1,188,939,304B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |                               ->14.06% (1,188,939,304B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |                                 
+|   |   ->00.05% (3,953,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->14.06% (1,188,939,296B) 0x6AEBC03: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->14.06% (1,188,939,296B) 0x6B0FBD3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->14.06% (1,188,939,296B) 0x6B0FCB0: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     ->14.06% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     | ->14.06% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |   ->14.06% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |     ->14.06% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |     | ->14.06% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |     |   ->14.06% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |     |     ->14.06% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |     |       ->14.06% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |     |         ->14.06% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |     |           ->14.06% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |     |             
+|   |     |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |     
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->14.06% (1,188,939,296B) 0x6FCB3E9: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->14.06% (1,188,939,296B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   ->14.06% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     ->14.06% (1,188,939,296B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |     | ->14.06% (1,188,939,296B) 0x4ABF94: PyObject_Call (in /usr/bin/python2.7)
+|   |     |   ->14.06% (1,188,939,296B) 0x6AADF29: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |     |     ->14.06% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       ->14.06% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       | ->14.06% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |   ->14.06% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |     ->14.06% (1,188,939,296B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     |       |       ->14.06% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     |       |       | ->14.06% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |     |       |       |   ->14.06% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |     |       |       |     ->14.06% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |       ->14.06% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |     |       |       |         ->14.06% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |     |       |       |           ->14.06% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |     |       |       |             
+|   |     |       |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       |       
+|   |     |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     |       
+|   |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     
+|   ->14.06% (1,188,939,296B) 0x6AC3546: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->14.06% (1,188,939,296B) 0x6AEB45A: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | | ->14.06% (1,188,939,296B) 0x6AFD458: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |   ->14.06% (1,188,939,296B) 0x6B03DD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |     ->14.06% (1,188,939,296B) 0x6B04D31: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | |       ->14.06% (1,188,939,296B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   | |         ->14.06% (1,188,939,296B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   | |           ->14.06% (1,188,939,296B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   | |             ->14.06% (1,188,939,296B) 0x540389: ??? (in /usr/bin/python2.7)
+|   | |               ->14.06% (1,188,939,296B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   | |                 ->14.06% (1,188,939,296B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   | |                   ->14.06% (1,188,939,296B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   | |                     ->14.06% (1,188,939,296B) 0x598FEA3: (below main) (libc-start.c:260)
+|   | |                       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->13.82% (1,168,550,496B) 0x6ADC338: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->13.82% (1,168,550,496B) 0x6ADC4A3: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->13.82% (1,168,550,208B) 0x480403: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | | ->13.77% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |   ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |     ->13.77% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |       ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |         ->13.77% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   | |           ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   | |           | ->13.77% (1,164,596,464B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   | |           |   ->13.77% (1,164,596,464B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   | |           |     ->13.77% (1,164,596,464B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   | |           |       ->13.77% (1,164,596,464B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   | |           |         ->13.77% (1,164,596,464B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   | |           |           ->13.77% (1,164,596,464B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   | |           |             
+|   |   | |           ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | |           
+|   |   | ->00.05% (3,953,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | 
+|   |   ->00.00% (288B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->13.77% (1,164,596,464B) 0x6AEFA63: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->13.77% (1,164,596,464B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |     ->13.77% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |       ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |         ->13.77% (1,164,596,464B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |           ->13.77% (1,164,596,464B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |             ->13.77% (1,164,596,464B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |               ->13.77% (1,164,596,464B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |                 ->13.77% (1,164,596,464B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |                   ->13.77% (1,164,596,464B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |                     
+|   ->13.77% (1,164,596,464B) 0x6B0F234: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   | ->13.77% (1,164,596,464B) 0x6B0F6AE: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   ->13.77% (1,164,596,464B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |     ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |       ->13.77% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |         ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |           ->13.77% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |             ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |               ->13.77% (1,164,596,464B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |                 ->13.77% (1,164,596,464B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |                   ->13.77% (1,164,596,464B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |                     ->13.77% (1,164,596,464B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |                       ->13.77% (1,164,596,464B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |                         ->13.77% (1,164,596,464B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |                           ->13.77% (1,164,596,464B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |                             ->13.77% (1,164,596,464B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |                               
+|   ->01.76% (148,617,412B) 0x6FC8CD4: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   | ->01.76% (148,617,412B) 0x6FC8F46: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/umath.so)
+|   |   ->01.76% (148,617,412B) 0x4A0105: ??? (in /usr/bin/python2.7)
+|   |   | ->01.76% (148,617,412B) 0x4FFA33: _PyObject_CallFunction_SizeT (in /usr/bin/python2.7)
+|   |   |   ->01.76% (148,617,412B) 0x6B1320B: ??? (in /usr/lib/python2.7/dist-packages/numpy/core/multiarray.so)
+|   |   |   | ->01.76% (148,617,412B) 0x4DE449: ??? (in /usr/bin/python2.7)
+|   |   |   | | ->01.76% (148,617,412B) 0x4C819C: PyObject_RichCompare (in /usr/bin/python2.7)
+|   |   |   | |   ->01.76% (148,617,412B) 0x51798A: ??? (in /usr/bin/python2.7)
+|   |   |   | |   | ->01.76% (148,617,412B) 0x47B968: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |   ->01.76% (148,617,412B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |     ->01.76% (148,617,412B) 0x47CFB8: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |       ->01.76% (148,617,412B) 0x4E0B2E: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |         ->01.76% (148,617,412B) 0x4E0EE8: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |           ->01.76% (148,617,412B) 0x4CE25C: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |             ->01.76% (148,617,412B) 0x4A071E: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |               ->01.76% (148,617,412B) 0x4A0813: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                 ->01.76% (148,617,412B) 0x4DE449: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                   ->01.76% (148,617,412B) 0x4C819C: PyObject_RichCompare (in /usr/bin/python2.7)
+|   |   |   | |   |                     ->01.76% (148,617,412B) 0x47BAFD: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |                       ->01.76% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |                         ->01.76% (148,617,412B) 0x47BDDB: PyEval_EvalFrameEx (in /usr/bin/python2.7)
+|   |   |   | |   |                           ->01.76% (148,617,412B) 0x4E0488: PyEval_EvalCodeEx (in /usr/bin/python2.7)
+|   |   |   | |   |                             ->01.76% (148,617,412B) 0x53FF10: PyEval_EvalCode (in /usr/bin/python2.7)
+|   |   |   | |   |                               ->01.76% (148,617,412B) 0x540389: ??? (in /usr/bin/python2.7)
+|   |   |   | |   |                                 ->01.76% (148,617,412B) 0x4658F2: PyRun_FileExFlags (in /usr/bin/python2.7)
+|   |   |   | |   |                                   ->01.76% (148,617,412B) 0x465E22: PyRun_SimpleFileExFlags (in /usr/bin/python2.7)
+|   |   |   | |   |                                     ->01.76% (148,617,412B) 0x466B97: Py_Main (in /usr/bin/python2.7)
+|   |   |   | |   |                                       ->01.76% (148,617,412B) 0x598FEA3: (below main) (libc-start.c:260)
+|   |   |   | |   |                                         
+|   |   |   | |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   | |   
+|   |   |   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   | 
+|   |   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->00.00% (637B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.60% (51,075,575B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 67 856,275,770,734    3,774,875,096    3,774,426,282       448,814            0
+ 68 859,487,455,249    4,963,818,968    4,963,367,554       451,414            0
+ 69 862,014,029,698    3,774,877,520    3,774,428,634       448,886            0
+ 70 864,094,675,962    3,774,877,520    3,774,428,634       448,886            0
+ 71 875,530,001,412    6,104,076,352    6,103,621,819       454,533            0
+ 72 880,960,532,470    6,104,076,288    6,103,621,771       454,517            0
+ 73 883,487,096,749    3,774,878,592    3,774,429,682       448,910            0
+ 74 885,945,313,955    4,963,820,488    4,963,369,082       451,406            0
+ 75 887,887,731,032    6,152,762,424    6,152,308,506       453,918            0

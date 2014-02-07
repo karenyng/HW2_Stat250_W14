@@ -11,6 +11,7 @@ Dependencies:
 How to use the code 
 --------------------
 At a terminal:
+
     $./method1.py $NUMBER_OF_CORES_TO_USE
 
 Outputs / results: 

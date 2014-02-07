@@ -1,7 +1,7 @@
 Assignment 2
 =============
 
-Dependency:
+Dependencies:
 -----------
 * put csv files in ${GITHUB directory}/data/
 * pandas 
@@ -10,9 +10,10 @@ Dependency:
 
 How to use the code 
 --------------------
+At a terminal:
     $./method1.py $NUMBER_OF_CORES_TO_USE
 
 Outputs / results: 
 ------------------
-    pp_{NUMBER_OF_CORES_USED}.txt
+* pp_{NUMBER_OF_CORES_USED}.txt
 

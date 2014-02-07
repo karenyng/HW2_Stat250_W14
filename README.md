@@ -16,4 +16,5 @@ At a terminal:
 Outputs / results: 
 ------------------
 * pp_{NUMBER_OF_CORES_USED}.txt
+* time_cpus.txt  
 

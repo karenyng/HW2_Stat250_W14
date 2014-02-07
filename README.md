@@ -4,8 +4,9 @@ Assignment 2
 Dependencies:
 -----------
 * put csv files in ${GITHUB directory}/data/
-* pandas 
-* numpy 
+* python pp package 
+* python pandas 
+* python numpy 
 * python 
 
 How to use the code 

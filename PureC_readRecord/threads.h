@@ -1,3 +1,4 @@
+#include "readRecords.h"
 void * thread_multi_readDelays(void *data);
 void *thread_readDelays(void *data);
 

@@ -1,4 +1,3 @@
-#include "readRecords.h"
 
 #include <pthread.h>
 #include <stdio.h>

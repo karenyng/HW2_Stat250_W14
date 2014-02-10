@@ -7,7 +7,6 @@
 
 void showTable(Table *t);
 
-
 /* Stand-alone entry point. */
 int 
 main(int nargs, char *argv[])
@@ -19,6 +18,7 @@ main(int nargs, char *argv[])
     showTable(&tt);
     return(0);
 }
+
 
 
 

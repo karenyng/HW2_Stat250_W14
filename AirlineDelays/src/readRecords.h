@@ -7,6 +7,7 @@ unsigned long readDelays(const char *filename, void *d, int fieldNum);
 //#define FIELD_NUM 44
 #define FIELD_NUM 14
 
+
 /* Really want a C++ class. */
 typedef struct  {
     int min, max;
@@ -18,4 +19,3 @@ typedef struct  {
 Table* combineTables(Table **tables, int num, Table *out);
 
 Table *makeTable(Table *tt);
-

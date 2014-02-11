@@ -7,12 +7,12 @@
 
 void showTable(Table *t);
 
+
 /* Stand-alone entry point. */
 int 
 main(int nargs, char *argv[])
 {
-    /* Currently symmetric, but really there are fewer possible negative values
-     * than positive delays. */
+    /* Currently symmetric, but really there are fewer possible negative values than positive delays. */
     Table tt = {- MAX_NUM_VALUES/2, MAX_NUM_VALUES/2, MAX_NUM_VALUES + 1};
     memset(tt.values, 0, sizeof(int) * (MAX_NUM_VALUES + 1));
     readDelays(argv[1], &tt, FIELD_NUM);
@@ -20,8 +20,9 @@ main(int nargs, char *argv[])
     return(0);
 }
 
-/* Initialize a Table object, allocating it if necessary or filling in an
- * existing instance.  */
+
+
+/* Initialize a Table object, allocating it if necessary or filling in an existing instance.  */
 Table *
 makeTable(Table *tt)
 {
@@ -58,7 +59,6 @@ insertValue(int value, Table *t)
 void 
 showTable(Table *t)
 {
-    fprintf(stderr, "delay min: freq \n");
     int i;
     for(i = 0; i < MAX_NUM_VALUES; i++) {
 	if(t->values[i] > 0)
@@ -84,11 +84,8 @@ readDelays(const char *filename, void *data, int fieldNum)
     unsigned long count = 0;
 
     f = fopen(filename, "r");
-    if(!f){	
-	// add a more informative error message 
-	fprintf(stderr, "File at path %s not found. Exiting!\n", filename);
+    if(!f) 
 	exit(1);  // if we run this in R, don't use exit(), but PROBLEM-ERROR.
-    }
 
     // header line
     fgets(line, MAX_NUM_CHARS, f);
@@ -104,8 +101,7 @@ readDelays(const char *filename, void *data, int fieldNum)
 }
 
 
-/* Read an individual record in a file, 
- * returning the value of the ARR_DELAY variable. */
+/* Read an individual record in a file, returning the value of the ARR_DELAY variable. */
 int
 readRecord(char *line, int fieldNum)
 {
@@ -132,15 +128,19 @@ readRecord(char *line, int fieldNum)
     }
 
 #endif
+
     return(atoi(val));
 }
 
 
 
 
+
+
+
 /* 
-  Merge several tables into a single table. This sums counts from the different 
-  tables for the same value.
+  Merge several tables into a single table. This sums counts from the different tables
+  for the same value.
   Could do this with threads, but probably not worth the overhead. */
 Table*
 combineTables(Table **tables, int num, Table *out)

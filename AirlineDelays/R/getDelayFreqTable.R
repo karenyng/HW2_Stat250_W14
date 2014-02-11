@@ -1,7 +1,7 @@
 #----------------------------------------------------------------------
-# To run roxygen to generate Rd files for documentation
+# To run roxygen2 to generate Rd files for proper documentation
 #----------------------------------------------------------------------
-
+#' @useDynLib AirlineDelays
 #' @name getDelayTable
 #' @title single threaded version for gettign a freq table from csv file 
 #' @param filename the name of local csv file 
@@ -19,6 +19,7 @@ function(filename, fieldNum = getFieldNum(filename))
              as.integer(fieldNum))
   tt[tt > 0]
 }
+
 
 #' @name getFieldNum
 #' @title read csv header to get appropriate column number  
@@ -41,7 +42,8 @@ function(filename)
   # I believe the following line attempt to correct for the comma in a field
   # the check should be done across all the field - i 'm not sure 
   # if this is done quite correctly?...
-  suppressWarnings(fieldNum <- i + length(grep(",", as.character(tmp[1,w]))) - 1L)
+  suppressWarnings(fieldNum <- 
+                        i + length(grep(",", as.character(tmp[1,w]))) - 1L)
   #print(paste("getFieldNum returns", fieldNum))
   fieldNum
 }
@@ -56,11 +58,12 @@ function(filename)
 #'   R integer that denotes the fieldNum 
 #' @param numThreads 
 #'   R integer that denotes the num of threads to be used 
-#' @return a dataframe that contains the combined frequency table 
+#' @return a vector that contains the combined frequency table 
 #' @note
 #'   Take the files and field numbers and group them
 #'   and then divide them into numThreads groups.
-#'   for now, require the caller to give us a list with as many elements as there are
+#'   for now, require the caller to give us a list with as many elements as
+#'   there are
 #'   threads and each element is a character vector of the file names to
 #'   process in that thread.
 #'   right now the function will give error since files is a list of
@@ -71,10 +74,11 @@ function(files, fieldNum = sapply(files, getFieldNum), numThreads = 4L)
 {
   numThreads <- checkInputsForErrors(files, numThreads)
 #  fnames = split(files, fieldNum)
-  tt = .Call("R_threaded_multiReadDelays", files, as.integer(numThreads), TRUE, 
-             as.integer(fieldNum))
+  tt = .Call("R_threaded_multiReadDelays", files, 
+             as.integer(numThreads), TRUE, as.integer(fieldNum))
   tt[tt > 0]
 }
+
 
 #' @name getListOfFiles
 #' @title return a list of filenames 
@@ -86,6 +90,7 @@ function(files, fieldNum = sapply(files, getFieldNum), numThreads = 4L)
 #' @return FILES 
 #'   R list of filenames 
 #' @seealso \code{\link[base]{list.files}}
+#' @export
 getListOfFiles = 
 function(filepath, pattern = NULL, full.names = TRUE)
 {  
@@ -105,6 +110,8 @@ function(filepath, pattern = NULL, full.names = TRUE)
   }
   FILES
 }
+
+
 #' @name checkInputsForErrors 
 #' @title check for input errors 
 #' @param FILES 
@@ -125,3 +132,61 @@ function(FILES, numCores)
  }
  numCores
 }
+
+
+#' @name freq_mean
+#' @title compute mean from frequency table
+#' @param tt 
+#'   vector with count as field value, column name as delay
+#' @param w.total
+#'   integer denoting total frequency count 
+#' @return mean 
+#' @export
+freq_mean = 
+function(tt)
+{
+  df <- as.data.frame(tt)
+  # store them as double to avoid numerical instabilities
+  delay <- sapply(rownames(df), as.double)  
+  w.total <- sum(df[,c('tt')]) 
+  # would there be overflow? or underflow for the following line?
+  t.mean <- sum(df[,c('tt')] * ( delay / w.total), na.rm = TRUE)
+
+  c(w.total, t.mean)
+}
+
+
+
+#freq_median = 
+#function(w.total)
+#{
+#  i <- 1
+#  Sum <- DF[['freq']][i]
+#  medianFreqCount <- floor(w.total / 2) 
+#  ## sorry don't know better than to write a loop...
+#  while(Sum < medianFreqCount) { 
+#    i <- i + 1 
+#    # this vectorized operation 
+#    Sum <- sum(DF[['freq']][1:i], na.rm = TRUE)
+#    # is faster than 
+#    ## if ( !is.na(DF[['freq']][i]) ) {
+#    ##   Sum <- Sum + DF[['freq']][i] 
+#    ## }
+#  }
+#
+#  ## check for corner case:  
+#  ## or else there the median will may be off  
+#  print("compute_stat.R: computing standard dev.")
+#  if( Sum == medianFreqCount &&  w.total %% 2 == 0){
+#    # print("going through special case")
+#    t.median <- (DF[['delay']][i] + DF[['delay']][i+1])/2   
+#  }else{
+#    t.median <- DF[['delay']][i]
+#  }
+#}
+
+#sd = 
+#function()
+#{
+##std.dev <- sqrt(sum(DF[['freq']] * (DF[['delay']] - t.mean) ^ 2 / (w.total-1))) 
+#}

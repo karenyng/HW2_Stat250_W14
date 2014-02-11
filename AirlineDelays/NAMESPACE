@@ -1,10 +1,6 @@
-useDynLib(AirlineDelays)
-
+export(checkInputsForErrors)
+export(freq_mean)
 export(getDelayTable)
 export(getDelayTable_thread)
 export(getListOfFiles)
-
-# exporting all the functions for testing purposes 
-# the following should be hidden instead 
-export(checkInputsForErrors)
-export(getFieldNum)
+useDynLib(AirlineDelays)

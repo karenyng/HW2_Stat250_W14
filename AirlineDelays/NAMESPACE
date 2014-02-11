@@ -3,7 +3,8 @@ useDynLib(AirlineDelays)
 export(getDelayTable)
 export(getDelayTable_thread)
 export(getListOfFiles)
-export(checkInputsForErrors)
 
 # exporting all the functions for testing purposes 
+# the following should be hidden instead 
+export(checkInputsForErrors)
 export(getFieldNum)

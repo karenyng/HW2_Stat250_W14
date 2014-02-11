@@ -118,8 +118,10 @@ checkInputsForErrors =
 function(FILES, numCores)
 {
  if(length(FILES) < as.integer(numCores)){
-  print("AirlineDelays - checkInputsForErrors")
-  print("Number of files supplied < number of threads! Exiting")
-  q("no", 1, FALSE)
+   print("AirlineDelays - checkInputsForErrors")
+   print("Number of files supplied < number of threads!!")
+
+   q("no", 1, FALSE)
  }
+  
 }

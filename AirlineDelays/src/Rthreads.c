@@ -12,7 +12,7 @@ R_serial_multiDelays(SEXP filenames, SEXP fieldNum)
     Table *tt = makeTable(NULL);
 
     for(i = 0; i < n ; i++) {
-	readDelays(CHAR(STRING_ELT(filenames, i)), tt, INTEGER(fieldNum)[i]);	
+		readDelays(CHAR(STRING_ELT(filenames, i)), tt, INTEGER(fieldNum)[i]);	
     }
 
     return(convertTableToR(tt));
@@ -38,50 +38,49 @@ R_threaded_multiReadDelays(SEXP filenames, SEXP numThreads, SEXP returnTable, SE
     Table *tables[n];
 
     for(t = 0 ; t < n; t++) {
-	FileNames *fn = malloc(sizeof(FileNames)); 
-	// memory will be lost unless we free() it!
-	fn->numEls = Rf_length(VECTOR_ELT(filenames, t));
-	printf("number of files = %d\n", fn->numEls);
-	fn->filenames = (const char * *) malloc(sizeof(char *) * fn->numEls);
-	fn->fieldNum = INTEGER(fieldNum)[t]; 
-	/* a single integer vector which means that all of the files in 
-	 * the 	same thread have to have the same field number. We can relax
-	 * this restriction. */
-	for(int i = 0; i < fn->numEls; i++)
-	    fn->filenames[i] = CHAR(STRING_ELT(VECTOR_ELT(filenames, t), i));
-	tables[t] = fn->counts = makeTable(NULL);
+		FileNames *fn = malloc(sizeof(FileNames)); 
+		// memory will be lost unless we free() it!
+		fn->numEls = Rf_length(VECTOR_ELT(filenames, t));
+		fn->filenames = (const char * *) malloc(sizeof(char *) * fn->numEls);
+		fn->fieldNum = INTEGER(fieldNum)[t]; 
+		/* a single integer vector which means that all of the files in 
+		 * the 	same thread have to have the same field number. We can relax
+		 * this restriction. */
+		for(int i = 0; i < fn->numEls; i++)
+			fn->filenames[i] = CHAR(STRING_ELT(VECTOR_ELT(filenames, t), i));
+			printf("number of files = %d\n", fn->numEls);
+		tables[t] = fn->counts = makeTable(NULL);
 
-	status = pthread_create(&thread[t], &attr, 
-		thread_multi_readDelays, (void *) fn); 
-	if(status) {
-	    PROBLEM  "Problem creating thread for %d",  t
-		WARN;
-	}
+		status = pthread_create(&thread[t], &attr, 
+				 thread_multi_readDelays, (void *) fn); 
+		if(status) {
+			PROBLEM  "Problem creating thread for %d",  t
+			WARN;
+		}
     }
 
     void *val;
     for(t = 0 ; t < n; t++) {
-	status = pthread_join(thread[t], &val);
-	if(status) {
-	    PROBLEM  "Problem joining thread for %s",  CHAR(STRING_ELT(filenames, t))
-		WARN;
-	}
+		status = pthread_join(thread[t], &val);
+		if(status) {
+			PROBLEM  "Problem joining thread for %s",  CHAR(STRING_ELT(filenames, t))
+			WARN;
+		}
     }
 
     if(LOGICAL(returnTable)[0]) {
-#if 1
-        Table *tmp = combineTables(tables, n, tables[0]); 
-	//NULL/* was tables[0] */);
-	ans = convertTableToR(tmp);
-#else
-	PROTECT(ans = NEW_LIST(n));
-	for(t = 0; t < n; t++) {
-	  SET_VECTOR_ELT(ans, t, convertTableToR(tables[t]));
-	}
-	UNPROTECT(1);
-#endif
+		#if 1
+			Table *tmp = combineTables(tables, n, tables[0]); 
+			//NULL/* was tables[0] */);
+			ans = convertTableToR(tmp);
+		#else
+			PROTECT(ans = NEW_LIST(n));
+			for(t = 0; t < n; t++) {
+			  SET_VECTOR_ELT(ans, t, convertTableToR(tables[t]));
+			}
+			UNPROTECT(1);
+		#endif
     }
-
 
     return(ans);
 }

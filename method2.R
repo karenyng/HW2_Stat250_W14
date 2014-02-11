@@ -16,4 +16,4 @@ pattern <- "^198[7-9].csv$"
 FILES <- getListOfFiles(filepath, pattern = pattern)
 tt <- getDelayTable_thread(FILES, numThreads = as.integer(numCores))
 
-print(tt) 
+mean(tt) 

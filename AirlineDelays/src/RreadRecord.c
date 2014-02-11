@@ -10,8 +10,8 @@ R_getFileDelayTable(SEXP filename, SEXP returnTable, SEXP fieldNum)
 
     SEXP ans = R_NilValue;
 
-
-    memset(tt.values, 0, sizeof(int) * (MAX_NUM_VALUES + 1)); // ended up fixing this in two places!
+    // ended up fixing this in two places!
+    memset(tt.values, 0, sizeof(int) * (MAX_NUM_VALUES + 1)); 
     readDelays(CHAR(STRING_ELT(filename, 0)), &tt, INTEGER(fieldNum)[0]);
 
     if(LOGICAL(returnTable)[0]) 

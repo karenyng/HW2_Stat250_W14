@@ -2,7 +2,7 @@ int readRecord(char *line, int fieldNum);
 unsigned long readDelays(const char *filename, void *d, int fieldNum);
 
 #define MAX_NUM_CHARS 2000
-#define MAX_NUM_VALUES 4000
+#define MAX_NUM_VALUES 6000
 
 //#define FIELD_NUM 44
 #define FIELD_NUM 14

@@ -2,18 +2,17 @@
 # To run roxygen to generate Rd files for documentation
 #----------------------------------------------------------------------
 
-getDelayTable =
 #' @name getDelayTable
 #' @title single threaded version for gettign a freq table from csv file 
-#' @alias getDelayTable 
 #' @param filename the name of local csv file 
 #' @param fieldNum an integer denoting the number of the field to get 
 #' @return a numeric vector denoting the table 
-#' @author DTL \email{dtemplelang@ucdavis.edu}  
 #' @seealso \code{\link[base]{read.csv}}
 #'   \code{\link[base]{file}}
 #' @examples getDelayTable("~/Data/Airline/Airlines/1987.csv", 15L)
 #' @keywords IO
+#' @export
+getDelayTable =
 function(filename, fieldNum = getFieldNum(filename))
 {
   tt = .Call("R_getFileDelayTable", path.expand(filename), TRUE, 
@@ -21,20 +20,16 @@ function(filename, fieldNum = getFieldNum(filename))
   tt[tt > 0]
 }
 
-getFieldNum =
 #' @name getFieldNum
 #' @title read csv header to get appropriate column number  
-#' @alias getFieldNum 
 #' @note not sure that it finds the number correctly due to possible "," 
 #'   inside the fields 
 #' @param filename the name of local csv file 
 #' @param fieldNum an integer denoting the number of the field to get 
 #' @return an integer denoting the column number  
-#' @author DTL \email{dtemplelang@ucdavis.edu}  
-#' @seealso \code{\link[base]{read.csv}}
-#'   \code{\link[base]{file}}
 #' @examples getFieldNum("~/Data/Airline/Airlines/1987.csv")
 #' @keywords IO
+getFieldNum =
 function(filename)
 {
   d = read.csv(filename, nrows = 1, stringsAsFactors = FALSE)
@@ -46,13 +41,14 @@ function(filename)
   # I believe the following line attempt to correct for the comma in a field
   # the check should be done across all the field - i 'm not sure 
   # if this is done quite correctly?...
-  fieldNum = i + length(grep(",", as.character(tmp[1,w]))) - 1L
+  suppressWarnings(fieldNum <- i + length(grep(",", as.character(tmp[1,w]))) - 1L)
   #print(paste("getFieldNum returns", fieldNum))
   fieldNum
 }
 
 
-getDelayTable_thread =
+#' @name getDelayTable_thread
+#' @title returns a freq table of delay times 
 #' @param files 
 #'   R list that contains path to files - has to be a list, c() does not
 #'   work 
@@ -69,16 +65,19 @@ getDelayTable_thread =
 #'   process in that thread.
 #'   right now the function will give error since files is a list of
 #'   filenames but perhaps not the entire file path is specified correctly  
+#' @export
+getDelayTable_thread =
 function(files, fieldNum = sapply(files, getFieldNum), numThreads = 4L)
 {
-  checkInputsForErrors(files, numThreads)
+  numThreads <- checkInputsForErrors(files, numThreads)
 #  fnames = split(files, fieldNum)
   tt = .Call("R_threaded_multiReadDelays", files, as.integer(numThreads), TRUE, 
              as.integer(fieldNum))
   tt[tt > 0]
 }
 
-getListOfFiles = 
+#' @name getListOfFiles
+#' @title return a list of filenames 
 #' @param filepath 
 #'   string that contains the path to the directory containing the files 
 #' @param  pattern 
@@ -86,17 +85,15 @@ getListOfFiles =
 #' @param full.names 
 #' @return FILES 
 #'   R list of filenames 
-#' @author K \email{karenyng@ucdavis.edu}
 #' @seealso \code{\link[base]{list.files}}
+getListOfFiles = 
 function(filepath, pattern = NULL, full.names = TRUE)
 {  
   # list all the files in the relevant diretory
   files = list.files(filepath, pattern = pattern, full.names = TRUE)
   if(length(files) == 0)
   {
-    print(paste("AirlineDelays - getListOfFiles: 
-                failed to read in files at", filepath))
-    q("no", 1, FALSE)
+    stop(paste("Failed to read in files at", filepath))
   }
    
   # function that Duncan wrote only likes lists 
@@ -108,20 +105,23 @@ function(filepath, pattern = NULL, full.names = TRUE)
   }
   FILES
 }
-
-checkInputsForErrors =
+#' @name checkInputsForErrors 
+#' @title check for input errors 
 #' @param FILES 
 #'   R list of files 
 #' @param numCores  
 #'  an integer that denotes the number of cores to be used  
-#' @note this suppresses a memory error 
+#' @note this suppresses a possible memory error 
+#' @return numCores 
+#'  an integer that denotes numCore that will not cause memory error
+#' @export
+checkInputsForErrors =
 function(FILES, numCores)
 {
  if(length(FILES) < as.integer(numCores)){
-   print("AirlineDelays - checkInputsForErrors")
    print("Number of files supplied < number of threads!!")
-
-   q("no", 1, FALSE)
+   print("setting numCores = number of files")
+   numCores <- length(FILES)
  }
-  
+ numCores
 }

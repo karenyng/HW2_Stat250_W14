@@ -105,22 +105,23 @@ R_threaded_readDelays(SEXP filenames)
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
     /* Start n threads simultaneously */
     for(t = 0 ; t < n; t++) {
-	const char *fn = CHAR(STRING_ELT(filenames, t));
-	status = pthread_create(&thread[t], &attr, thread_readDelays, (void *)fn); 
-	if(status) {
-	    PROBLEM  "Problem creating thread for %s",  fn
-		WARN;
-	}
+		const char *fn = CHAR(STRING_ELT(filenames, t));
+		status = pthread_create(&thread[t], &attr, thread_readDelays, 
+				(void *)fn); 
+		if(status) {
+			PROBLEM  "Problem creating thread for %s",  fn
+			WARN;
+		}
     }
 
     /* wait until all the threads have completed. */
     void *val;
     for(t = 0 ; t < n; t++) {
-	status = pthread_join(thread[t], &val);
-	if(status) {
-	    PROBLEM  "Problem joining thread for %s",  CHAR(STRING_ELT(filenames, t))
-		WARN;
-	}
+		status = pthread_join(thread[t], &val);
+		if(status) {
+			PROBLEM  "Problem joining thread for %s",  CHAR(STRING_ELT(filenames, t))
+			WARN;
+		}
     }
     return(R_NilValue);
 }

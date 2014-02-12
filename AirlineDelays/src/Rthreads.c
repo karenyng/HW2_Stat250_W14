@@ -48,7 +48,6 @@ R_threaded_multiReadDelays(SEXP filenames, SEXP numThreads, SEXP returnTable, SE
 		 * this restriction. */
 		for(int i = 0; i < fn->numEls; i++)
 			fn->filenames[i] = CHAR(STRING_ELT(VECTOR_ELT(filenames, t), i));
-			printf("number of files = %d\n", fn->numEls);
 		tables[t] = fn->counts = makeTable(NULL);
 
 		status = pthread_create(&thread[t], &attr, 

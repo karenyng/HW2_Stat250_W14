@@ -195,16 +195,16 @@ function(w.total, tt)
 
   ## check for corner case:  
   ## or else there the median will may be off  
-  print("compute_stat.R: computing standard dev.")
   if( Sum == medianFreqCount &&  w.total %% 2 == 0){
-    # print("going through special case")
+    #print("going through special case")
     t.median <- (delay[i] + delay[i+1])/2   
   }else{
     t.median <- delay[i]
-  }
+  } 
+  t.median
 }
 
-#' @name sd
+#' @name freq_sd
 #' @title compute sd from frequency table
 #' @param t.mean
 #'   double denoting the mean
@@ -215,7 +215,7 @@ function(w.total, tt)
 #' @return median 
 #'   double
 #' @export
-sd = 
+freq_sd = 
 function(t.mean, tt, w.total)
 {
   df <- as.data.frame(tt)

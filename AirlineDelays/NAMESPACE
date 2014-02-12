@@ -1,5 +1,7 @@
 export(checkInputsForErrors)
 export(freq_mean)
+export(freq_median)
+export(freq_sd)
 export(getDelayTable)
 export(getDelayTable_thread)
 export(getListOfFiles)

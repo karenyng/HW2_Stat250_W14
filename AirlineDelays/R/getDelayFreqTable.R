@@ -149,7 +149,7 @@ function(tt)
   df <- as.data.frame(tt)
   # store them as double to avoid numerical instabilities
   delay <- sapply(rownames(df), as.double)  
-  w.total <- sum(df[,c('tt')])/2 
+  w.total <- sum(df[,c('tt')]) 
   # would there be overflow? or underflow for the following line?
   t.mean <- sum(df[,c('tt')] * ( delay / w.total), na.rm = TRUE)
 

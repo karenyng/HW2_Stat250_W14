@@ -1,4 +1,4 @@
-int readRecord(char *line, int fieldNum);
+char * readRecord(char *line, int fieldNum);
 unsigned long readDelays(const char *filename, void *d, int fieldNum);
 
 #define MAX_NUM_CHARS 2000

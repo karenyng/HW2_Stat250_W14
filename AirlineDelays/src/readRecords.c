@@ -90,11 +90,12 @@ readDelays(const char *filename, void *data, int fieldNum)
     // header line
     fgets(line, MAX_NUM_CHARS, f);
 
-    int val;
+    char *val;
     while(fgets(line, MAX_NUM_CHARS, f)) {
 		val = readRecord(line, fieldNum);
-		if(!isinf(val)){
-			storeValue(val, data);
+		// try to mask out NA values and empty strings 
+		if((*val != 'N') && (*val != '\0')){
+			storeValue(atoi(val), data);
 			count++;
 		}
     }
@@ -104,7 +105,7 @@ readDelays(const char *filename, void *data, int fieldNum)
 
 
 /* Read an individual record in a file, returning the value of the ARR_DELAY variable. */
-int
+char * 
 readRecord(char *line, int fieldNum)
 {
     int i = 0, field;
@@ -131,12 +132,12 @@ readRecord(char *line, int fieldNum)
 
 #endif
 	// there should be several lines here handling NAN values 
-	if((val[0] == 'N' && val[1] == 'A') ||  (val[0] == '\0' && val)){ 
-		// there is no trivial way of returning NAN correctly
-		return(NAN); 
-	}
+	//if((val[0] == 'N' && val[1] == 'A') ||  (val[0] == '\0' && val)){ 
+	//	// there is no trivial way of returning NAN correctly
+	//	return(NAN); 
+	//}
 
-    return(atoi(val));
+    return (char *) val;
 }
 
 

@@ -4,7 +4,7 @@ Author: DTL <duncan@r-project.org>
 Maintainer: DTL <duncan@r-project.org>
 Title: Calculate arrival delay statistics for "large" amount of data
 Description: This explores different ways of computing the mean, median,
-    SD of the arrival delay from a collection of CSV files. Contain bug
+    SD of the arrival delay from a collection of CSV files. Contains bug
     contributions from Karen Ng.
 License: GPL2
 Note: There is a new problem with one version of the thread code where we want

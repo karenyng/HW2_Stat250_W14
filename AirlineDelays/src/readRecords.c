@@ -93,8 +93,10 @@ readDelays(const char *filename, void *data, int fieldNum)
     int val;
     while(fgets(line, MAX_NUM_CHARS, f)) {
 		val = readRecord(line, fieldNum);
-		storeValue(val, data);
-		count++;
+		if(!isinf(val)){
+			storeValue(val, data);
+			count++;
+		}
     }
 
     return(count);
@@ -129,11 +131,9 @@ readRecord(char *line, int fieldNum)
 
 #endif
 	// there should be several lines here handling NAN values 
-	float NA = NAN;
-	if((val[0] == 'N' && val[1] == 'A') ||  (val[0] == '\0' && val)) 
-	{
-		fprintf(stderr, "NAN encountered!\n");
-		return(NA); 
+	if((val[0] == 'N' && val[1] == 'A') ||  (val[0] == '\0' && val)){ 
+		// there is no trivial way of returning NAN correctly
+		return(NAN); 
 	}
 
     return(atoi(val));

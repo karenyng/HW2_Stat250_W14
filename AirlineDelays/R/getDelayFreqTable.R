@@ -131,6 +131,11 @@ function(FILES, numCores)
    print("setting numCores = number of files")
    numCores <- length(FILES)
  }
+ if(length(FILES) > as.integer(numCores)){
+   stop("Number of files supplied > number of threads! \n
+        Increase the number of threads via numCores!")
+
+ }
  numCores
 }
 

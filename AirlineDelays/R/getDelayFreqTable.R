@@ -80,6 +80,7 @@ function(files, fieldNum = sapply(files, getFieldNum), numThreads = 4L)
 }
 
 
+
 #' @name getListOfFiles
 #' @title return a list of filenames 
 #' @param filepath 
@@ -154,7 +155,6 @@ function(tt)
 
   c(w.total, t.mean)
 }
-
 
 
 #freq_median = 

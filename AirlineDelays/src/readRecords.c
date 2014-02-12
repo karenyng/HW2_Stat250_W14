@@ -1,7 +1,7 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "readRecords.h"
 
@@ -44,11 +44,11 @@ void
 insertValue(int value, Table *t)
 {
     if(value < t->min || value > t->max) {
-	fprintf(stderr, "%d is outside of the range of the table\n", value);
-    } else {
-	int i;
-	i = value - t->min;
-	t->values[i] ++;
+			fprintf(stderr, "%d is outside of the range of the table\n", value);
+	} else {
+		int i;
+		i = value - t->min;
+		t->values[i] ++;
     }
 }
 
@@ -92,9 +92,9 @@ readDelays(const char *filename, void *data, int fieldNum)
 
     int val;
     while(fgets(line, MAX_NUM_CHARS, f)) {
-	val = readRecord(line, fieldNum);
-	storeValue(val, data);
-	count++;
+		val = readRecord(line, fieldNum);
+		storeValue(val, data);
+		count++;
     }
 
     return(count);
@@ -107,7 +107,7 @@ readRecord(char *line, int fieldNum)
 {
     int i = 0, field;
     char *val;
-
+	//char 
 #if 0
     char *tmp;
     for(i = 0; i < 43; i++)
@@ -116,18 +116,25 @@ readRecord(char *line, int fieldNum)
 #else
 
     for(i = 0, field = 0; i < MAX_NUM_CHARS; i++) {
-	if(line[i] == ',') { // used = rather than ==
-	    field++;
-	    if(field == fieldNum) {
-		val = line + i + 1;
-	    } else if(field == fieldNum + 1) {
-		line[i] = '\0';
-		break;
-	    }
-	}
+		if(line[i] == ',') { // used = rather than ==
+			field++;
+			if(field == fieldNum) {
+				val = line + i + 1;
+			} else if(field == fieldNum + 1) {
+				line[i] = '\0';
+				break;
+			}
+		}
     }
 
 #endif
+	// there should be several lines here handling NAN values 
+	float NA = NAN;
+	if((val[0] == 'N' && val[1] == 'A') ||  (val[0] == '\0' && val)) 
+	{
+		fprintf(stderr, "NAN encountered!\n");
+		return(NA); 
+	}
 
     return(atoi(val));
 }

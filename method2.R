@@ -6,7 +6,7 @@
 require(AirlineDelays)
 
 # this numCore variable should be input from the console instead 
-numCores <- 1L 
+numCores <- 2L 
 
 #Initialize some variables  
 #filepath <- "/mnt/Winter14Stat250/HW2_Stat250_W14/data"
@@ -14,12 +14,13 @@ filepath <- "/mnt/Winter14Stat250/HW2_Stat250_W14/tests"
 #pattern <- "^([0-9]+).csv$"
 #pattern <- "^2008([a-zA-Z_]+).csv$"
 #pattern <- "^1987.csv$"
-pattern <- "^test.csv$"
+pattern <- "^1987[1-2].csv$"
 
 FILES <- getListOfFiles(filepath, pattern = pattern)
 tt <- getDelayTable_thread(FILES, numThreads = as.integer(numCores))
-print(freq_mean(tt))
-
+ans <- freq_mean(tt)
+print(paste("freq = ", ans[[1]]))
+print(paste("mean = ", ans[[2]]))
 
 
 

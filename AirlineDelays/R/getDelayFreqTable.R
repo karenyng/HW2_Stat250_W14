@@ -146,6 +146,7 @@ function(FILES, numCores)
 freq_mean = 
 function(tt)
 {
+  print(tt)
   df <- as.data.frame(tt)
   # store them as double to avoid numerical instabilities
   delay <- sapply(rownames(df), as.double)  

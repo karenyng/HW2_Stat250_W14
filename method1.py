@@ -63,6 +63,7 @@ delay = delay[~np.isnan(delay)]
 mean = np.mean(delay)
 sd = np.std(delay)
 median = np.median(delay)
+#print "number of valid lines {0}".format(delay.size())
 
 f = open("pp_{0}.txt".format(ncpus), "w")
 f.write('mean = {0:1.7}\n'.format(mean))

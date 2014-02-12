@@ -141,7 +141,8 @@ function(FILES, numCores)
 #'   vector with count as field value, column name as delay
 #' @param w.total
 #'   integer denoting total frequency count 
-#' @return mean 
+#' @return list of 
+#'   total freq. count, mean 
 #' @export
 freq_mean = 
 function(tt)
@@ -158,36 +159,61 @@ function(tt)
 }
 
 
-#freq_median = 
-#function(w.total)
-#{
-#  i <- 1
-#  Sum <- DF[['freq']][i]
-#  medianFreqCount <- floor(w.total / 2) 
-#  ## sorry don't know better than to write a loop...
-#  while(Sum < medianFreqCount) { 
-#    i <- i + 1 
-#    # this vectorized operation 
-#    Sum <- sum(DF[['freq']][1:i], na.rm = TRUE)
-#    # is faster than 
-#    ## if ( !is.na(DF[['freq']][i]) ) {
-#    ##   Sum <- Sum + DF[['freq']][i] 
-#    ## }
-#  }
-#
-#  ## check for corner case:  
-#  ## or else there the median will may be off  
-#  print("compute_stat.R: computing standard dev.")
-#  if( Sum == medianFreqCount &&  w.total %% 2 == 0){
-#    # print("going through special case")
-#    t.median <- (DF[['delay']][i] + DF[['delay']][i+1])/2   
-#  }else{
-#    t.median <- DF[['delay']][i]
-#  }
-#}
+#' @name freq_median
+#' @title compute median from frequency table
+#' @param w.total
+#'   integer denoting total frequency count 
+#' @param tt 
+#'   vector with count as field value, column name as delay
+#' @return median 
+#'   double
+#' @export
+freq_median = 
+function(w.total, tt)
+{
+  i <- 1
+  df <- as.data.frame(tt)
+  delay <- sapply(rownames(df), as.double)  
+  Sum <- df[['tt']][i]
 
-#sd = 
-#function()
-#{
-##std.dev <- sqrt(sum(DF[['freq']] * (DF[['delay']] - t.mean) ^ 2 / (w.total-1))) 
-#}
+  medianFreqCount <- floor(w.total / 2) 
+  ## sorry don't know better than to write a loop...
+  while(Sum < medianFreqCount) { 
+    i <- i + 1 
+    # this vectorized operation 
+    Sum <- sum(df[['tt']][1:i], na.rm = TRUE)
+    # is faster than 
+    ## if ( !is.na(DF[['freq']][i]) ) {
+    ##   Sum <- Sum + DF[['freq']][i] 
+    ## }
+  }
+
+  ## check for corner case:  
+  ## or else there the median will may be off  
+  print("compute_stat.R: computing standard dev.")
+  if( Sum == medianFreqCount &&  w.total %% 2 == 0){
+    # print("going through special case")
+    t.median <- (delay[i] + delay[i+1])/2   
+  }else{
+    t.median <- delay[i]
+  }
+}
+
+#' @name sd
+#' @title compute sd from frequency table
+#' @param t.mean
+#'   double denoting the mean
+#' @param w.total
+#'   integer denoting total frequency count 
+#' @param tt 
+#'   vector with count as field value, column name as delay
+#' @return median 
+#'   double
+#' @export
+sd = 
+function(t.mean, tt, w.total)
+{
+  df <- as.data.frame(tt)
+  delay <- sapply(rownames(df), as.double)  
+  std.dev <- sqrt(sum(df[,c('tt')] * (delay - t.mean) ^ 2 / (w.total-1))) 
+}

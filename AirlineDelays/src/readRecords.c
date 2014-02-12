@@ -157,10 +157,13 @@ combineTables(Table **tables, int num, Table *out)
 	out = makeTable(NULL);
 
     int i, j;
-
-    for(i = 0; i < num; i++) {
-	for(j = 0; j < out->numValues; j++) 
-	    out->values[j] += tables[i]->values[j];
+	// the following goes through the memory and write out values 
+	// very subtle bug, since Table *out is set to the first table
+	// we should not add to the first table to itself
+	// changing i = 0 to i = 1 in the following for loop
+    for(i = 1; i < num; i++) {
+		for(j = 0; j < out->numValues; j++) 
+			out->values[j] += tables[i]->values[j];
     }
 
     return(out);

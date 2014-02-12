@@ -10,11 +10,11 @@ numCores <- 2L
 
 #Initialize some variables  
 #filepath <- "/mnt/Winter14Stat250/HW2_Stat250_W14/data"
-filepath <- "/mnt/Winter14Stat250/HW2_Stat250_W14/tests"
+filepath <- "/mnt/Winter14Stat250/HW2_Stat250_W14/data"
 #pattern <- "^([0-9]+).csv$"
 #pattern <- "^2008([a-zA-Z_]+).csv$"
 #pattern <- "^1987.csv$"
-pattern <- "^1987[1-2].csv$"
+pattern <- "^([0-9]+)([a-zA-Z]+).csv$"
 
 FILES <- getListOfFiles(filepath, pattern = pattern)
 tt <- getDelayTable_thread(FILES, numThreads = as.integer(numCores))

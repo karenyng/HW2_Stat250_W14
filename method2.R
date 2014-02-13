@@ -12,7 +12,7 @@ if(!(is.integer(numCore) && numCore > 0))
   stop("Wrong numCore commandline argument, not integer!")
 
 # ----Initialize some variables ----- 
-filepath <- "/mnt/Winter14Stat250/HW2_Stat250_W14/data"
+filepath <- "./data"
 #filepath <- "/mnt/Winter14Stat250/HW2_Stat250_W14/tests"
 #pattern <- "^([0-9]+).csv$"
 #pattern <- "^2008([a-zA-Z_]+).csv$"

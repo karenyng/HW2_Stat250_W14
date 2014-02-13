@@ -14,6 +14,7 @@ Dependencies:
 
 How to use the code 
 --------------------
+### Method 1 
 For running the python code specifying a certain number of cores, at a terminal run:
 
     $./method1.py $NUMBER_OF_CORES_TO_USE
@@ -22,7 +23,10 @@ For running the python code for a range of cores, modify method1_wrapper.py then
 
     $./method1_wrapper.py
 
-Outputs / results: 
+### Method 2 
+    $Rscript ./method2.py $NUMBER_OF_FILES_TO_USE
+
+Outputs / results for method 1: 
 ------------------
 * pp_{NUMBER_OF_CORES_USED}.txt
 * time_cpus.txt  

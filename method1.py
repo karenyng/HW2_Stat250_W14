@@ -140,7 +140,7 @@ for batch in range(yr_numbatch):
     for input1, job1 in thisbatch:
         delay = np.append(delay, job1())
 
-for batch in range(yr_numbatch, yr_numbatch + mth_numbatch - 1):
+for batch in range(yr_numbatch, yr_numbatch + mth_numbatch):
     thisbatch = batches[batch]
     #print "this batch is ", thisbatch, "\n"
     for input1, job1 in thisbatch:

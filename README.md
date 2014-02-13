@@ -14,6 +14,7 @@ Dependencies:
 * python pandas 
 * python numpy 
 * python 
+* R package inside this repository called AirlineDelays
 
 How to use the code 
 --------------------

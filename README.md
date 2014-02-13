@@ -1,8 +1,11 @@
 Assignment 2
 =============
 
-Write up available at:
+IPython notebook version of Write up available at:
 http://nbviewer.ipython.org/github/karenyng/HW2_Stat250_W14/blob/master/writeup/Stat250%20W14%20HW2.ipynb?create=1#
+
+PDF format available at: 
+https://github.com/karenyng/HW2_Stat250_W14/blob/master/writeup/Stat250%20W14%20HW2.pdf
 
 Dependencies:
 -----------

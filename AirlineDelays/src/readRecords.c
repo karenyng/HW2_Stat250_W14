@@ -16,7 +16,7 @@ main(int nargs, char *argv[])
     Table tt = {- MAX_NUM_VALUES/2, MAX_NUM_VALUES/2, MAX_NUM_VALUES + 1};
     memset(tt.values, 0, sizeof(int) * (MAX_NUM_VALUES + 1));
     readDelays(argv[1], &tt, FIELD_NUM);
-    showTable(&tt);
+    //showTable(&tt);
     return(0);
 }
 

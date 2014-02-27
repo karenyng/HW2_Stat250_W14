@@ -7,6 +7,13 @@ http://nbviewer.ipython.org/github/karenyng/HW2_Stat250_W14/blob/master/writeup/
 PDF format available at: 
 https://github.com/karenyng/HW2_Stat250_W14/blob/master/writeup/Stat250%20W14%20HW2.pdf
 
+Note:
+---- 
+Current implementation is not the best. 
+For Method 2, should divide up the files according to the number of cores
+for doing load balancing appropriately before supplying the list of files to 
+"getDelayTable_thread". 
+
 Dependencies:
 -----------
 * put csv files in ${GITHUB directory}/data/
